@@ -1,0 +1,25 @@
+{
+  "name": "brunch-app",
+  "description": "Brunch.io application",
+  "private": true,
+  "author": "Brunch",
+  "version": "0.0.1",
+  "repository": "",
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "bootstrap": "^4",
+    "brunch": "^2",
+    "brunch-static": "^1.2.1",
+    "clean-css-brunch": "^2",
+    "gsap": "^2.0.1",
+    "html-brunch-static": "^1.4.0",
+    "jade-brunch": "^2.8.0",
+    "pug-brunch-static": "^3.0.0",
+    "sass-brunch": "^2.10.4",
+    "uglify-js-brunch": "^2"
+  }
+}
