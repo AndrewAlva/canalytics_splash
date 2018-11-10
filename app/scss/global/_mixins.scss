@@ -1,0 +1,99 @@
+@mixin transitions-ease($timing){
+	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1);
+	   -moz-transition: all $timing cubic-bezier(.3,0,.2,1);
+	    -ms-transition: all $timing cubic-bezier(.3,0,.2,1);
+	     -o-transition: all $timing cubic-bezier(.3,0,.2,1);
+	        transition: all $timing cubic-bezier(.3,0,.2,1);
+}
+
+@mixin transitions-linear($timing){
+	-webkit-transition: all $timing linear;
+	   -moz-transition: all $timing linear;
+	    -ms-transition: all $timing linear;
+	     -o-transition: all $timing linear;
+	        transition: all $timing linear;
+}
+
+@mixin transformFrom($xOrigin, $yOrigin){
+    -webkit-transform-origin: $xOrigin $yOrigin;
+       -moz-transform-origin: $xOrigin $yOrigin;
+        -ms-transform-origin: $xOrigin $yOrigin;
+    	 -o-transform-origin: $xOrigin $yOrigin;
+    		transform-origin: $xOrigin $yOrigin;
+}
+
+@mixin rotate($degs){
+    -webkit-transform: -webkit-rotate($degs);
+    -webkit-transform: rotate($degs);
+       -moz-transform: rotate($degs);
+        -ms-transform: rotate($degs);
+    	 -o-transform: rotate($degs);
+    		transform: rotate($degs);
+}
+
+@mixin translate($Xmove, $Ymove){
+    -webkit-transform: translate($Xmove, $Ymove);
+       -moz-transform: translate($Xmove, $Ymove);
+        -ms-transform: translate($Xmove, $Ymove);
+    	 -o-transform: translate($Xmove, $Ymove);
+    		transform: translate($Xmove, $Ymove);
+}
+
+@mixin smoothFont{
+	text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin dropShadowSmall{
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+@mixin dropShadowNone{
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+	-moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+	box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+@mixin drawShadow($xMove, $yMove, $blur, $size, $color){
+	-webkit-box-shadow: $xMove $yMove $blur $size $color;
+	-moz-box-shadow: $xMove $yMove $blur $size $color;
+	box-shadow: $xMove $yMove $blur $size $color;
+}
+
+@mixin gw-green-gradient{
+	background: #00c048;
+	background: -moz-linear-gradient(left, #00c048 0%, #00d185 70%);
+	background: -webkit-linear-gradient(left, #00c048 0%,#00d185 70%);
+	background: linear-gradient(to right, #00c048 0%,#00d185 70%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c048', endColorstr='#00d185',GradientType=1 );
+}
+
+@mixin flexIt{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin flexJustify($alignment){
+	-webkit-box-pack: $alignment;
+	-webkit-justify-content: $alignment;
+	-ms-flex-pack: $alignment;
+	justify-content: $alignment;
+}
+
+@mixin flexWrap{
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+@mixin flexNoWrap{
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}

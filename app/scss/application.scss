@@ -11,4 +11,9 @@
 
 
 // Import your files
-@import 'global/default.scss';
+@import 'global/mixins';
+@import 'global/default';
+
+@import 'modules/hero-section';
+@import 'modules/register-section';
+@import 'modules/sponsor-section';

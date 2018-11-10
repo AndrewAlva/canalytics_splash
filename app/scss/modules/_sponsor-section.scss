@@ -1,0 +1,59 @@
+#sponsor-section{
+	z-index: 10;
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	vertical-align: top;
+
+	.info-wrapper{
+		position: relative;
+		width: 100%;
+		height: 66.66%;
+
+		.inner-wrap{
+			position: relative;
+			display: inline-block;
+			width: 50%;
+			height: 100%;
+			vertical-align: top;
+
+			.include-box{
+				.mask{
+					display: block;
+				}
+			}
+		}
+		
+		.includes-wrap{
+			background-color: #fff;
+		}
+		.what-wrap{
+			background-color: #4cac4d;
+		}
+	}
+
+	.tagline-wrapper{
+		position: relative;
+		width: 100%;
+		height: 33.33%;
+		padding: 50px 60px;
+		text-align: right;
+		background-color: #2b7728;
+
+		.tagline{
+			color: #fff;
+		}
+
+		.badge{
+			position: absolute;
+			width: 221px;
+			height: 221px;
+			top: 0;
+			left: 0;
+			@include translate(-50%,-50%);
+			border-radius: 50%;
+			background-color: #fed546;
+		}
+	}
+}
