@@ -2,11 +2,14 @@ extends views/layout.jade
 
 block content
 	section#hero-section
+		include includes/svg-brand-logo.jade
+		include includes/svg-brand-c.jade
 	section#register-section
 	section#sponsor-section
 		.info-wrapper
 			.inner-wrap.includes-wrap
-				h5.title Includes
+				h5.title
+					span Includes
 				.include-box
 					.index 
 						span.mask
@@ -57,9 +60,11 @@ block content
 							span grow cycles
 
 			.inner-wrap.what-wrap
+				
+
 		.tagline-wrapper
 			h3.tagline
 				| Growth 
 				br
 				| Intelligence
-			figure.badge
+			include includes/svg-cta-badge.jade

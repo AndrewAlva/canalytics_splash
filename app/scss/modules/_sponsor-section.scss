@@ -16,6 +16,7 @@
 			display: inline-block;
 			width: 50%;
 			height: 100%;
+			padding: 90px 50px;
 			vertical-align: top;
 
 			.include-box{
@@ -47,13 +48,11 @@
 
 		.badge{
 			position: absolute;
-			width: 221px;
-			height: 221px;
+			width: 180px;
+			height: 180px;
 			top: 0;
 			left: 0;
 			@include translate(-50%,-50%);
-			border-radius: 50%;
-			background-color: #fed546;
 		}
 	}
 }
