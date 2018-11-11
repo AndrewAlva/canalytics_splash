@@ -16,20 +16,72 @@
 			display: inline-block;
 			width: 50%;
 			height: 100%;
-			padding: 90px 50px;
 			vertical-align: top;
 
+			.title{
+				font-family: 'Calibre';
+				font-size: 38px;
+				line-height: 1.1em;
+				margin-bottom: 45px;
+				color: #575c74;
+			}
+
 			.include-box{
-				.mask{
-					display: block;
+				position: absolute;
+				color: #868da4;
+
+				&.hide{
+					display: none;
 				}
+
+				.index{
+					font-family: 'Calibre';
+					font-size: 28px;
+					margin-bottom: 10px;
+				}
+
+				.description{
+					font-family: 'Calibre-l';
+					font-size: 32px;
+					line-height: 1.3em;
+					@include smoothFont;
+				}
+			}
+
+			.sponsor-title{
+				font-family: 'Maison-b';
+				font-size: 46px;
+				line-height: 1.1em;
+				@include smoothFont;
+				color: #fff;
+				margin-bottom: 25px;
+			}
+
+			.sponsor-value{
+				font-family: 'Calibre';
+				font-size: 39px;
+				line-height: 1em;
+				color: #010330;
+			}
+
+			.sponsor-duration{
+				position: absolute;
+				bottom: 0;
+				margin-bottom: 50px;
+				font-family: 'Calibre';
+				font-size: 39px;
+				line-height: 1em;
+				@include smoothFont;
+				color: #fff;
 			}
 		}
 		
 		.includes-wrap{
+			padding: 60px 40px;
 			background-color: #fff;
 		}
 		.what-wrap{
+			padding: 55px 40px 60px;
 			background-color: #4cac4d;
 		}
 	}
@@ -38,11 +90,14 @@
 		position: relative;
 		width: 100%;
 		height: 33.33%;
-		padding: 50px 60px;
+		padding: 60px;
 		text-align: right;
 		background-color: #2b7728;
 
 		.tagline{
+			font-size: 38px;
+			font-weight: 400;
+			line-height: 1em;
 			color: #fff;
 		}
 

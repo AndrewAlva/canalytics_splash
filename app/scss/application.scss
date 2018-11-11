@@ -11,9 +11,23 @@
 
 
 // Import your files
+@import 'global/fonts';
 @import 'global/mixins';
 @import 'global/default';
+@import 'global/animation-intro';
 
 @import 'modules/hero-section';
 @import 'modules/register-section';
 @import 'modules/sponsor-section';
+
+.tester{
+	z-index: 1000;
+	position: absolute;
+	width: 200px;
+	height: 77px;
+	background-color: #f00;
+	opacity: .3;
+
+	top: 688px;
+	right: 60px;
+}

@@ -1,6 +1,7 @@
 extends views/layout.jade
 
 block content
+	//- .tester
 	section#hero-section
 		include includes/svg-brand-logo.jade
 		include includes/svg-brand-c.jade
@@ -10,61 +11,79 @@ block content
 			.inner-wrap.includes-wrap
 				h5.title
 					span Includes
-				.include-box
+				#include-1.include-box
 					.index 
-						span.mask
+						span.ac-mask
 							span 01.
 
 					p.description
-						span.mask
+						span.ac-mask
 							span Three grow cycles of
-						span.mask
+						span.ac-mask
 							span Precision Ag Tech 
-						span.mask
+						span.ac-mask
 							span product clinically 
-						span.mask
+						span.ac-mask
 							span proven to increase 
-						span.mask
+						span.ac-mask
 							span yields over 40%.
 
-				.include-box
+				#include-2.include-box.hide
 					.index 
-						span.mask
+						span.ac-mask
 							span 02.
 
 					p.description
-						span.mask
+						span.ac-mask
 							span Proprietary data
-						span.mask
+						span.ac-mask
 							span analytics engine to
-						span.mask
+						span.ac-mask
 							span further maximize
-						span.mask
+						span.ac-mask
 							span grow yields and
-						span.mask
+						span.ac-mask
 							span solution sets
 
-				.include-box
+				#include-3.include-box.hide
 					.index 
-						span.mask
+						span.ac-mask
 							span 03.
 
 					p.description
-						span.mask
+						span.ac-mask
 							span Optimized cultivation
-						span.mask
+						span.ac-mask
 							span report delivered at
-						span.mask
+						span.ac-mask
 							span the end of the three
-						span.mask
+						span.ac-mask
 							span grow cycles
 
 			.inner-wrap.what-wrap
+				h2.sponsor-title
+					span.ac-mask
+						span Exclusive
+					span.ac-mask
+						span Grower
+					span.ac-mask
+						span Sponsorship
+
+				h5.sponsor-value
+					span.ac-mask
+						span Valued over
+					span.ac-mask
+						span $50, 000
+
+				p.sponsor-duration
+					span.ac-mask
+						span One Year Free!
 				
 
 		.tagline-wrapper
 			h3.tagline
-				| Growth 
-				br
-				| Intelligence
+				span.ac-mask
+					span Growth 
+				span.ac-mask
+					span Intelligence
 			include includes/svg-cta-badge.jade
