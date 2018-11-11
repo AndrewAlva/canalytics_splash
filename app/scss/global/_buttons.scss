@@ -1,8 +1,9 @@
 .ac-btn{
 	position: relative;
+	padding-top: 21px;
+	padding-bottom: 18px;
 	border-radius: 70px;
 	border: none;
-	padding: 21px 52px 18px;
 	font-family: 'Maison-b';
 	font-size: 18px;
 	font-weight: 100;
@@ -33,6 +34,17 @@
 	&:hover{
 		&:before{
 			@include drawShadow(0,0,0,0,#863dee);
+			@include scale(.5,.5);
 		}
 	}
+}
+
+.cta-btn{
+	padding-left: 52px;
+	padding-right: 52px;
+}
+
+.next-btn{
+	width: 60px;
+	height: 60px;
 }

@@ -39,6 +39,14 @@
     		transform: translate($Xmove, $Ymove);
 }
 
+@mixin scale($Xscale, $Yscale){
+    -webkit-transform: scale($Xscale, $Yscale);
+       -moz-transform: scale($Xscale, $Yscale);
+        -ms-transform: scale($Xscale, $Yscale);
+    	 -o-transform: scale($Xscale, $Yscale);
+    		transform: scale($Xscale, $Yscale);
+}
+
 @mixin smoothFont{
 	text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;

@@ -1,7 +1,7 @@
 extends views/layout.jade
 
 block content
-	//- .tester
+	.tester
 	section#hero-section
 		include includes/svg-brand-logo.jade
 		include includes/svg-brand-c.jade
@@ -24,7 +24,7 @@ block content
 					span maximize your production results.
 
 			.cta-container
-				button.ac-btn.cta-btn 
+				button.ac-btn.cta-btn
 					span.ac-mask
 						span Apply now
 				h6.disclaimer 
@@ -44,7 +44,7 @@ block content
 					span Growers
 		.form-wrapper
 			form(action="#")
-				h5 Application
+				h5.form-title Application
 				label(for="#") Full Name
 				input(type="text")
 				label(for="#") Email
@@ -52,7 +52,7 @@ block content
 				label(for="#") Phone Number
 				input(type="text")
 
-				button(type="submit").ac-btn >
+				button(type="submit").ac-btn.next-btn
 
 				input(type="checkbox")
 				label(for="#") I agree to the processing and use of my personal data.
