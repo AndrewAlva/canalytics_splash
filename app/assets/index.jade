@@ -24,7 +24,9 @@ block content
 					span maximize your production results.
 
 			.cta-container
-				button.ac-btn.cta-btn Apply now
+				button.ac-btn.cta-btn 
+					span.ac-mask
+						span Apply now
 				h6.disclaimer 
 					span.ac-mask
 						span Registration doesn’t guarantee
@@ -32,6 +34,29 @@ block content
 						span admittance to the program.
 
 	section#register-section
+		.join-wrapper
+			h2 
+				span.ac-mask
+					span Join to The New
+				span.ac-mask
+					span Generation of
+				span.ac-mask
+					span Growers
+		.form-wrapper
+			form(action="#")
+				h5 Application
+				label(for="#") Full Name
+				input(type="text")
+				label(for="#") Email
+				input(type="text")
+				label(for="#") Phone Number
+				input(type="text")
+
+				button(type="submit").ac-btn >
+
+				input(type="checkbox")
+				label(for="#") I agree to the processing and use of my personal data.
+
 	section#sponsor-section
 		.info-wrapper
 			.inner-wrap.includes-wrap

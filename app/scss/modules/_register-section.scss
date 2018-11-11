@@ -1,8 +1,37 @@
 #register-section{
-	z-index: 1;
+	z-index: 1000;
+	// z-index: 1;
 	position: fixed;
 	width: 100%;
-	height: 200px;
+	height: 315px;
 	bottom: 0;
 	background-color: #10123f;
+
+	.join-wrapper{
+		position: relative;
+		display: inline-block;
+		width: 25%;
+		height: 100%;
+		padding: 60px 50px;
+		vertical-align: top;
+		background-color: #030524;
+
+		h2{
+			font-family: 'Maison-b';
+			font-weight: lighter;
+			font-size: 40px;
+			letter-spacing: -.04em;
+			line-height: 1em;
+			@include smoothFont;
+			color: #868da4;
+		}
+	}
+	.form-wrapper{
+		position: relative;
+		display: inline-block;
+		width: 75%;
+		height: 100%;
+		padding: 60px;
+		vertical-align: top;
+	}
 }
