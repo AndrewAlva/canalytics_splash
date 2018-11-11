@@ -6,4 +6,60 @@
 	height: 100%;
 	padding: 60px;
 	background-color: #f4f5f6;
+
+	.brand-c-bg{
+		position: absolute;
+		top: 80px;
+		right: 110px;
+	}
+
+	.texts-wrapper{
+		position: absolute;
+		left: 8.3vw;
+		bottom: 180px;
+
+		.hero-title{
+			font-family: 'Platform';
+			font-size: 80px;
+			font-weight: 100;
+			line-height: .8em;
+			@include smoothFont;
+			text-transform: uppercase;
+			margin-bottom: 32px;
+		}
+
+		.hero-intro{
+			font-family: 'Calibre';
+			font-size: 32px;
+			font-weight: lighter;
+			letter-spacing: -.012em;
+			line-height: 1em;
+			@include smoothFont;
+			color: #8d929f;
+			margin-bottom: 35px;
+		}
+
+		.cta-container{}
+
+		.disclaimer{
+			position: relative;
+			display: inline-block;
+			top: 8px;
+			margin: 0;
+			margin-left: 55px;
+			font-family: 'Calibre';
+			font-size: 18px;
+			font-weight: lighter;
+			line-height: 1em;
+			@include smoothFont;
+			color: #8d929f;
+
+			&:before{
+				content: '/';
+				position: absolute;
+				top: 0;
+				left: -18px;
+			}
+		}
+	}
 }

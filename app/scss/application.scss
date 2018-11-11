@@ -13,6 +13,7 @@
 // Import your files
 @import 'global/fonts';
 @import 'global/mixins';
+@import 'global/buttons';
 @import 'global/default';
 @import 'global/animation-intro';
 
@@ -23,11 +24,10 @@
 .tester{
 	z-index: 1000;
 	position: absolute;
-	width: 200px;
-	height: 77px;
+	width: 100%;
+	height: 46px;
 	background-color: #f00;
 	opacity: .3;
 
-	top: 688px;
-	right: 60px;
+	top: 683px;
 }
