@@ -1,7 +1,5 @@
 .ac-btn{
 	position: relative;
-	padding-top: 21px;
-	padding-bottom: 18px;
 	border-radius: 70px;
 	border: none;
 	font-family: 'Maison-b';
@@ -40,11 +38,27 @@
 }
 
 .cta-btn{
-	padding-left: 52px;
-	padding-right: 52px;
+	padding: 21px 52px 18px;
 }
 
-.next-btn{
+.submit-btn{
 	width: 60px;
 	height: 60px;
+	padding: 16px 26px;
+	text-align: center;
+
+	svg{@include transitions-ease(.4s);}
+
+	&.off{
+		pointer-events: none;
+		svg{
+			@include translate(-5px, 0);
+			opacity: 0;
+		}
+
+		&:before{
+			@include drawShadow(0,0,0,0,#863dee);
+			@include scale(0,0);
+		}
+	}
 }

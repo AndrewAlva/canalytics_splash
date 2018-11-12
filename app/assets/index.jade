@@ -1,7 +1,7 @@
 extends views/layout.jade
 
 block content
-	.tester
+	//- .tester
 	section#hero-section
 		include includes/svg-brand-logo.jade
 		include includes/svg-brand-c.jade
@@ -19,9 +19,11 @@ block content
 
 			h2.hero-intro
 				span.ac-mask
-					span Use data and precise Ag Tech to
+					span Use data and precise Ag
 				span.ac-mask
-					span maximize your production results.
+					span Tech to maximize your
+				span.ac-mask
+					span production results.
 
 			.cta-container
 				button.ac-btn.cta-btn
@@ -45,17 +47,27 @@ block content
 		.form-wrapper
 			form(action="#")
 				h5.form-title Application
-				label(for="#") Full Name
-				input(type="text")
-				label(for="#") Email
-				input(type="text")
-				label(for="#") Phone Number
-				input(type="text")
+				
+				.input-container
+					input#name-input(type="text")
+					label(for="name-input") Full Name
+				
+				.input-container
+					input#email-input(type="text")
+					label(for="email-input") Email
+				
+				.input-container
+					input#phone-input(type="text")
+					label(for="phone-input") Phone Number
 
-				button(type="submit").ac-btn.next-btn
+				button(type="submit")#submit-application.ac-btn.submit-btn
+					include includes/svg-next-arrow.jade
 
-				input(type="checkbox")
-				label(for="#") I agree to the processing and use of my personal data.
+				div
+					label.data-agreement(for="agree-checkbox")
+						input#agree-checkbox(type="checkbox")
+						span.checkmark
+						span.label I agree to the processing and use of my personal data.
 
 	section#sponsor-section
 		.info-wrapper
