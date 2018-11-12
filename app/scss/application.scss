@@ -14,6 +14,7 @@
 @import 'global/fonts';
 @import 'global/mixins';
 @import 'global/buttons';
+@import 'global/forms';
 @import 'global/default';
 @import 'global/animation-intro';
 
@@ -25,9 +26,9 @@
 	z-index: 1000000;
 	position: absolute;
 	width: 100%;
-	height: 28px;
+	height: 60px;
 	background-color: #f00;
 	opacity: .3;
 
-	bottom: 138px;
+	top: 0;
 }

@@ -1,7 +1,7 @@
 extends views/layout.jade
 
 block content
-	//- .tester
+	.tester
 	section#hero-section
 		include includes/svg-brand-logo.jade
 		include includes/svg-brand-c.jade
@@ -49,22 +49,22 @@ block content
 				h5.form-title Application
 				
 				.input-container
-					input#name-input(type="text")
+					input#name-input.ac-input(type="text")
 					label(for="name-input") Full Name
 				
 				.input-container
-					input#email-input(type="text")
+					input#email-input.ac-input(type="text")
 					label(for="email-input") Email
 				
 				.input-container
-					input#phone-input(type="text")
+					input#phone-input.ac-input(type="text")
 					label(for="phone-input") Phone Number
 
-				button(type="submit")#submit-application.ac-btn.submit-btn
+				button(type="submit")#submit-application.ac-btn.submit-btn.off
 					include includes/svg-next-arrow.jade
 
-				div
-					label.data-agreement(for="agree-checkbox")
+				div.data-agreement
+					label.ac-checkbox(for="agree-checkbox")
 						input#agree-checkbox(type="checkbox")
 						span.checkmark
 						span.label I agree to the processing and use of my personal data.
