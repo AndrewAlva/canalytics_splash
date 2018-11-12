@@ -4,10 +4,10 @@
 // subframes to finish loading
 document.addEventListener('DOMContentLoaded', function() {
     // Form interactions
-    	// Labeling
-		    // Add/remove class to ".input-fx" to change behavior of its own label
-				// If input is empty, <label> stays over input
-				// If input has text in it, <label> moves above input
+    	// Labels
+		    // Add/remove class to ".ac-input" to change behavior of its own label
+				// If input is empty, custom <label> stays over input
+				// If input has text in it, <label> fades
 				$(".ac-input").focusout(function(){
 					$(".ac-input").blur(function(){
 						if( !this.value ) {
@@ -17,6 +17,21 @@ document.addEventListener('DOMContentLoaded', function() {
 						}
 					});
 				});
+		// Agreement checkbox
+			// Check agreement status and able/disable submit button
+			// console.log('Submit form ')
+			if ($('#agree-checkbox').is(':checked')) {
+				$('#submit-application').removeClass('off');
+			}
+
+			// Listener to able/disable submit form
+			$('#user-agree').on('click', function () {
+				if ($('#agree-checkbox').is(':checked')) {
+					$('#submit-application').removeClass('off')
+				} else {
+					$('#submit-application').addClass('off')
+				}
+			});
 });
 
 
