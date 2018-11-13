@@ -6,7 +6,6 @@
 	font-size: 18px;
 	font-weight: 100;
 	color: #fff;
-	background: #10123f;
 	cursor: pointer;
 
 	&:before{
@@ -14,14 +13,10 @@
 		content: '';
 		position: absolute;
 		display: block;
-		width: 88%;
-		height: 80%;
 		margin: auto;
 		left: 0; right: 0;
-		bottom: 0;
 		border-radius: 70px;
 		background-color: #863dee;
-		@include drawShadow(0,0,24px,4px,#863dee);
 		@include transitions-ease(.8s);
 	}
 
@@ -38,7 +33,15 @@
 }
 
 .cta-btn{
+	background: #10123f;
 	padding: 21px 52px 18px;
+
+	&:before{
+		width: 88%;
+		height: 80%;
+		bottom: 0;
+		@include drawShadow(0,0,24px,4px,#863dee);
+	}
 }
 
 .submit-btn{
@@ -46,10 +49,23 @@
 	height: 60px;
 	padding: 16px 26px;
 	text-align: center;
+	background: #030524;
 
 	svg{@include transitions-ease(.4s);}
 
+	&:hover{
+		svg{@include translate(3px, 0);}
+	}
+
+	&:before{
+		width: 78%;
+		height: 70%;
+		bottom: 4%;
+		@include drawShadow(0,0,30px,2px,#863dee);
+	}
+
 	&.off{
+		background: #10123f;
 		pointer-events: none;
 		svg{
 			@include translate(-5px, 0);
