@@ -5,6 +5,7 @@
 	width: 50%;
 	height: 100%;
 	vertical-align: top;
+	@include trans-register(.4s);
 
 	.info-wrapper{
 		position: relative;
@@ -110,4 +111,10 @@
 			@include translate(-50%,-50%);
 		}
 	}
+}
+
+// Showing form state
+.showForm #sponsor-section{
+	height: 71%;
+	// height: calc(100% - 225px);
 }

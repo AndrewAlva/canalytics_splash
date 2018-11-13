@@ -6,12 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Form interactions
 		var registerForm = {
 			visible: false,
+			show_trigger: $('#show-form'),
 			agree_checkbox: $('#agree-checkbox'),
 			submit_btn: $('#submit-application'),
-			agree_triger: $('#user-agree'),
+			agree_trigger: $('#user-agree'),
 			toggleListener: function(){
 				// Listener to able/disable submit form
-				this.agree_triger.on('click', function(event) {
+				this.agree_trigger.on('click', function(event) {
 					if (registerForm.agree_checkbox.is(':checked')) {
 						registerForm.submit_btn.removeClass('off')
 					} else {
@@ -32,11 +33,25 @@ document.addEventListener('DOMContentLoaded', function() {
 					}
 				});
 			},
+			clickListener: function(){
+				this.show_trigger.on('click', function(event) {
+					event.preventDefault();
+					registerForm.show();
+				});
+			},
+			activateListeners: function(){
+				this.toggleListener();
+				this.scrollListener();
+				this.clickListener();
+			},
+
 			show: function(){
 				this.visible = true;
+				$('#main-wrapper').addClass('showForm');
 			},
 			hide: function(){
 				this.visible = false;
+				$('#main-wrapper').removeClass('showForm');
 			},
 
 			init: function(){
@@ -45,11 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					registerForm.submit_btn.removeClass('off');
 				}
 
-				// Activate click listener for agreement
-				this.toggleListener();
-
-				// Activate scroll listener
-				this.scrollListener();
+				this.activateListeners();
 			}
 		}
 		registerForm.init();

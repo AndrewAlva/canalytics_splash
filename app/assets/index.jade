@@ -26,7 +26,7 @@ block content
 					span production results.
 
 			.cta-container
-				button.ac-btn.cta-btn
+				button#show-form.ac-btn.cta-btn
 					span.ac-mask
 						span Apply now
 				h6.disclaimer 
@@ -34,40 +34,6 @@ block content
 						span Registration doesn’t guarantee
 					span.ac-mask
 						span admittance to the program.
-
-	section#register-section
-		.join-wrapper
-			h2 
-				span.ac-mask
-					span Join to The New
-				span.ac-mask
-					span Generation of
-				span.ac-mask
-					span Growers
-		.form-wrapper
-			form(action="#")
-				h5.form-title Application
-				
-				.input-container
-					input#name-input.ac-input(type="text")
-					label(for="name-input") Full Name
-				
-				.input-container
-					input#email-input.ac-input(type="text")
-					label(for="email-input") Email
-				
-				.input-container
-					input#phone-input.ac-input(type="text")
-					label(for="phone-input") Phone Number
-
-				button(type="submit")#submit-application.ac-btn.submit-btn.off
-					include includes/svg-next-arrow.jade
-
-				div.data-agreement#user-agree
-					label.ac-checkbox(for="agree-checkbox")
-						input#agree-checkbox(type="checkbox")
-						span.checkmark
-						span.label I agree to the processing and use of my personal data.
 
 	section#sponsor-section
 		.info-wrapper
@@ -150,3 +116,39 @@ block content
 				span.ac-mask
 					span Intelligence
 			include includes/svg-cta-badge.jade
+
+	section#register-section
+		.join-wrapper
+			h2 
+				span.ac-mask
+					span Join to The New
+				span.ac-mask
+					span Generation of
+				span.ac-mask
+					span Growers
+		.form-wrapper
+			form(action="#")
+				h5.form-title Application
+				
+				.input-container
+					input#name-input.ac-input(type="text")
+					label(for="name-input") Full Name
+				
+				.input-container
+					input#email-input.ac-input(type="text")
+					label(for="email-input") Email
+				
+				.input-container
+					input#phone-input.ac-input(type="text")
+					label(for="phone-input") Phone Number
+
+				button(type="submit")#submit-application.ac-btn.submit-btn.off
+					include includes/svg-next-arrow.jade
+
+				div.data-agreement#user-agree
+					label.ac-checkbox(for="agree-checkbox")
+						input#agree-checkbox(type="checkbox")
+						span.checkmark
+						span.label I agree to the processing and use of my personal data.
+
+
