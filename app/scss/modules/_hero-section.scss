@@ -8,10 +8,24 @@
 	background-color: #f4f5f6;
 	@include trans-register(.4s);
 
+	@media screen and (max-width: 1399px) {
+		padding: 35px;
+
+		.brand-logo{
+			width: 170px;
+		}
+	}
+
 	.brand-c-bg{
 		position: absolute;
 		top: 80px;
 		right: 110px;
+
+		@media screen and (max-width: 1399px) {
+			width: 240px;
+			top: 20px;
+			right: 60px;
+		}
 	}
 
 	.texts-wrapper{
@@ -19,6 +33,11 @@
 		left: 8.3vw;
 		bottom: 150px;
 		@include trans-register(.4s);
+
+		@media screen and (max-width: 1399px) {
+			left: 6vw;
+			bottom: 80px;
+		}
 
 		.hero-title{
 			font-family: 'Platform';
@@ -28,6 +47,11 @@
 			@include smoothFont;
 			text-transform: uppercase;
 			margin-bottom: 32px;
+
+			@media screen and (max-width: 1399px) {
+				font-size: 60px;
+				margin-bottom: 24px;
+			}
 		}
 
 		.hero-intro{
@@ -39,9 +63,12 @@
 			@include smoothFont;
 			color: #8d929f;
 			margin-bottom: 35px;
-		}
 
-		.cta-container{}
+			@media screen and (max-width: 1399px) {
+				font-size: 24px;
+				margin-bottom: 28px;
+			}
+		}
 
 		.disclaimer{
 			position: relative;
@@ -55,6 +82,10 @@
 			line-height: 1em;
 			@include smoothFont;
 			color: #8d929f;
+
+			@media screen and (max-width: 1399px) {
+				font-size: 16px;
+			}
 
 			&:before{
 				content: '/';
@@ -73,5 +104,9 @@
 
 	.texts-wrapper{
 		@include translate(0, 100px);
+
+		@media screen and (max-width: 1399px) {
+			@include translate(0, 30px);
+		}
 	}
 }

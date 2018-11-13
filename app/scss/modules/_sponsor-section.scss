@@ -25,6 +25,11 @@
 				line-height: 1.1em;
 				margin-bottom: 45px;
 				color: #575c74;
+
+				@media screen and (max-width: 1399px) {
+					font-size: 26px;
+					margin-bottom: 30px;
+				}
 			}
 
 			.include-box{
@@ -39,6 +44,10 @@
 					font-family: 'Calibre';
 					font-size: 28px;
 					margin-bottom: 10px;
+
+					@media screen and (max-width: 1399px) {
+						font-size: 20px;
+					}
 				}
 
 				.description{
@@ -46,6 +55,11 @@
 					font-size: 32px;
 					line-height: 1.3em;
 					@include smoothFont;
+
+					@media screen and (max-width: 1399px) {
+						font-size: 22px;
+						line-height: 1.1em;
+					}
 				}
 			}
 
@@ -56,6 +70,10 @@
 				@include smoothFont;
 				color: #fff;
 				margin-bottom: 25px;
+
+				@media screen and (max-width: 1399px) {
+					font-size: 30px;
+				}
 			}
 
 			.sponsor-value{
@@ -63,6 +81,10 @@
 				font-size: 39px;
 				line-height: 1em;
 				color: #010330;
+
+				@media screen and (max-width: 1399px) {
+					font-size: 26px;
+				}
 			}
 
 			.sponsor-duration{
@@ -74,16 +96,29 @@
 				line-height: 1em;
 				@include smoothFont;
 				color: #fff;
+
+				@media screen and (max-width: 1399px) {
+					font-size: 26px;
+					margin-bottom: 30px;
+				}
 			}
 		}
 		
 		.includes-wrap{
-			padding: 60px 40px;
+			padding: 60px 50px;
 			background-color: #fff;
+
+			@media screen and (max-width: 1399px) {
+				padding: 35px 30px;
+			}
 		}
 		.what-wrap{
-			padding: 55px 40px 60px;
+			padding: 55px 50px 60px;
 			background-color: #4cac4d;
+
+			@media screen and (max-width: 1399px) {
+				padding: 32px 30px 35px;
+			}
 		}
 	}
 
@@ -95,11 +130,19 @@
 		text-align: right;
 		background-color: #2b7728;
 
+		@media screen and (max-width: 1399px) {
+			padding: 40px;
+		}
+
 		.tagline{
 			font-size: 38px;
 			font-weight: 400;
 			line-height: 1em;
 			color: #fff;
+
+			@media screen and (max-width: 1399px) {
+				font-size: 26px;
+			}
 		}
 
 		.badge{
@@ -109,6 +152,11 @@
 			top: 0;
 			left: 0;
 			@include translate(-50%,-50%);
+
+			@media screen and (max-width: 1399px) {
+				width: 135px;
+				height: 135px;
+			}
 		}
 	}
 }

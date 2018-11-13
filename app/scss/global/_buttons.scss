@@ -8,6 +8,10 @@
 	color: #fff;
 	cursor: pointer;
 
+	@media screen and (max-width: 1399px) {
+		font-size: 14px;
+	}
+
 	&:before{
 		z-index: -1;
 		content: '';
@@ -35,6 +39,10 @@
 .cta-btn{
 	background: #10123f;
 	padding: 21px 52px 18px;
+
+	@media screen and (max-width: 1399px) {
+		padding: 16px 40px 12px;
+	}
 
 	&:before{
 		width: 88%;

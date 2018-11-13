@@ -19,6 +19,10 @@
 		vertical-align: top;
 		background-color: #030524;
 
+		@media screen and (max-width: 1399px) {
+			padding: 40px 30px;
+		}
+
 		h2{
 			font-family: 'Maison-b';
 			font-weight: lighter;
@@ -27,6 +31,10 @@
 			line-height: 1em;
 			@include smoothFont;
 			color: #868da4;
+
+			@media screen and (max-width: 1399px) {
+				font-size: 26px;
+			}
 		}
 	}
 	.form-wrapper{
@@ -37,6 +45,10 @@
 		padding: 60px;
 		vertical-align: top;
 
+		@media screen and (max-width: 1399px) {
+			padding: 40px;
+		}
+
 		.form-title{
 			font-family: 'Calibre';
 			font-size: 39px;
@@ -44,6 +56,10 @@
 			@include smoothFont;
 			color: #fff;
 			margin-bottom: 12px;
+
+			@media screen and (max-width: 1399px) {
+				font-size: 26px;
+			}
 		}
 
 		#submit-application{
