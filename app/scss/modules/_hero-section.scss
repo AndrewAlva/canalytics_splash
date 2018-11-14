@@ -124,39 +124,7 @@
 			}
 		}
 
-		.disclaimer{
-			position: relative;
-			display: inline-block;
-			top: 8px;
-			margin: 0;
-			margin-left: 55px;
-			font-family: 'Calibre';
-			font-size: 18px;
-			font-weight: lighter;
-			line-height: 1em;
-			@include smoothFont;
-			color: #8d929f;
-
-			@media screen and (max-width: 1399px) {
-				font-size: 16px;
-			}
-
-			@media screen and (max-width: 1024px) {
-				display: block;
-				margin-top: 20px;
-				margin-left: 18px;
-			}
-			@media screen and (max-width: 767px) {
-				top: 0;
-			}
-
-			&:before{
-				content: '/';
-				position: absolute;
-				top: 0;
-				left: -18px;
-			}
-		}
+		
 	}
 }
 

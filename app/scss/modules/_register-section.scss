@@ -11,10 +11,22 @@
 	@include translate(0,100%);
 	@include trans-register(.4s);
 
+	.disclaimer{
+		display: none;
+	}
+
 	@media screen and (max-width: 767px) {
 		position: relative;
 		height: auto;
 		@include translate(0,0);
+
+		.disclaimer{
+			display: inline-block;
+			top: 5px;
+			margin-top: 0;
+			margin-left: 32px;
+			color: #868da4;
+		}
 	}
 
 	.join-wrapper{
