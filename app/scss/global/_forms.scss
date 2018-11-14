@@ -3,12 +3,15 @@
 	display: inline-block;
 	vertical-align: top;
 	width: 24.22%;
-	margin-right: 25px;
 	font-family: 'Calibre';
 	font-size: 20px;
 	font-weight: lighter;
 	line-height: 1em;
 	@include smoothFont;
+
+	&:not(:last-child){
+		margin-right: 25px;
+	}
 
 	@media screen and (max-width: 1399px) {
 		font-size: 14px;

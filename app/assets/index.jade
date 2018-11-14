@@ -130,25 +130,26 @@ block content
 			form(action="#")
 				h5.form-title Application
 				
-				.input-container
-					input#name-input.ac-input(type="text")
-					label(for="name-input") Full Name
-				
-				.input-container
-					input#email-input.ac-input(type="text")
-					label(for="email-input") Email
-				
-				.input-container
-					input#phone-input.ac-input(type="text")
-					label(for="phone-input") Phone Number
+				.form-fields
+					.input-container
+						input#name-input.ac-input(type="text")
+						label(for="name-input") Full Name
+					
+					.input-container
+						input#email-input.ac-input(type="text")
+						label(for="email-input") Email
+					
+					.input-container
+						input#phone-input.ac-input(type="text")
+						label(for="phone-input") Phone Number
 
-				button(type="submit")#submit-application.ac-btn.submit-btn.off
-					include includes/svg-next-arrow.jade
-
-				div.data-agreement#user-agree
-					label.ac-checkbox(for="agree-checkbox")
-						input#agree-checkbox(type="checkbox")
-						span.checkmark
-						span.label I agree to the processing and use of my personal data.
-
+				.form-footer
+					div.data-agreement#user-agree
+						label.ac-checkbox(for="agree-checkbox")
+							input#agree-checkbox(type="checkbox")
+							span.checkmark
+							span.label I agree to the processing and use of my personal data.
+					
+					button(type="submit")#submit-application.ac-btn.submit-btn.off
+						span.ac-btn-label Send
 
