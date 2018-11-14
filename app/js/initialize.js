@@ -44,10 +44,29 @@ document.addEventListener('DOMContentLoaded', function() {
 					}, 2000);
 				});
 			},
+			sendListener: function(){
+				this.submit_btn.on('click', function(e) {
+					e.preventDefault();
+					if($('#name-input').val() == "" || $('#email-input').val() == "" || $('#phone-input').val() == "" ){
+						alert("You must fill all the fields marked with a red asterisk to complete the request!");
+					} else {
+						$.ajax({
+							url: "send_data.php",
+							type: "POST",
+							data: { name: $('#name-input').val(), email: $('#email-input').val(), tel: $("#phone-input").val() }
+						})
+						.done(function(e) {
+							// console.log("e",e);
+							registerForm.success();
+						});
+					}
+				});
+			},
 			activateListeners: function(){
 				this.toggleListener();
 				this.scrollListener();
 				this.clickListener();
+				this.sendListener();
 			},
 
 			success: function(){
