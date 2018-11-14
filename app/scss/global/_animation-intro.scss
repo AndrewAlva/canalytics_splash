@@ -1,3 +1,33 @@
-.ac-mask, .ac-mask > span{
+.ac-mask, .ac-mask > span, .ac-shift, .ac-shift > span{
 	display: block;
+}
+
+.ac-mask{
+	// overflow: hidden;
+}
+
+.ac-mask > span{
+	@include trans-register(.7s);
+	@include translate(-20%, 0);
+	opacity: 0;
+
+	&.show{
+		@include translate(0,0);
+		opacity: 1;
+	}
+}
+
+.ac-shift{
+	overflow: hidden;
+}
+
+.ac-shift > span{
+	@include trans-register(.7s);
+	@include translate(0, 120%);
+	opacity: 0;
+
+	&.show{
+		@include translate(0, 0);
+		opacity: 1;
+	}
 }

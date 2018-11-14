@@ -146,3 +146,10 @@
 		@include transitions-linear(.2s);
 	}
 }
+
+#success-message{
+	font-family: 'Calibre';
+	font-weight: lighter;
+	line-height: 1.2em;
+	color: #868da4;
+}

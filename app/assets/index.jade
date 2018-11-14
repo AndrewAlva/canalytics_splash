@@ -39,55 +39,56 @@ block content
 		.info-wrapper
 			.inner-wrap.includes-wrap
 				h5.title
-					span Includes
+					span.ac-mask
+						span Includes
 				#include-1.include-box
 					.index 
-						span.ac-mask
+						span.ac-mask.ac-shift
 							span 01.
 
 					p.description
-						span.ac-mask
+						span.ac-mask.ac-shift
 							span Three grow cycles of
-						span.ac-mask
+						span.ac-mask.ac-shift
 							span Precision Ag Tech 
-						span.ac-mask
+						span.ac-mask.ac-shift
 							span product clinically 
-						span.ac-mask
+						span.ac-mask.ac-shift
 							span proven to increase 
-						span.ac-mask
+						span.ac-mask.ac-shift
 							span yields over 40%.
 
-				#include-2.include-box.hide
+				#include-2.include-box
 					.index 
-						span.ac-mask
+						span.ac-shift
 							span 02.
 
 					p.description
-						span.ac-mask
+						span.ac-shift
 							span Proprietary data
-						span.ac-mask
+						span.ac-shift
 							span analytics engine to
-						span.ac-mask
+						span.ac-shift
 							span further maximize
-						span.ac-mask
+						span.ac-shift
 							span grow yields and
-						span.ac-mask
-							span solution sets
+						span.ac-shift
+							span solution sets.
 
-				#include-3.include-box.hide
+				#include-3.include-box
 					.index 
-						span.ac-mask
+						span.ac-shift
 							span 03.
 
 					p.description
-						span.ac-mask
+						span.ac-shift
 							span Optimized cultivation
-						span.ac-mask
+						span.ac-shift
 							span report delivered at
-						span.ac-mask
+						span.ac-shift
 							span the end of the three
-						span.ac-mask
-							span grow cycles
+						span.ac-shift
+							span grow cycles.
 				
 				include includes/svg-cta-badge.jade
 
@@ -130,9 +131,14 @@ block content
 		
 		.form-wrapper
 			form(action="#")
-				h5.form-title Application
+				h5.form-title 
+					span.ac-mask
+						span Application 
+							span#success-submit 
+								//- span.ac-shift
+									span Submitted.
 				
-				.form-fields
+				#application-fields.form-fields
 					.input-container
 						input#name-input.ac-input(type="text")
 						label(for="name-input") Full Name
@@ -144,15 +150,21 @@ block content
 					.input-container
 						input#phone-input.ac-input(type="text")
 						label(for="phone-input") Phone Number
+				
+				span#success-message 
+					//- h4.ac-shift 
+						span.show You're one step closer. We'll get back to you soon with details to win the sponsorship.
 
 				.form-footer
 					div.data-agreement#user-agree
 						label.ac-checkbox(for="agree-checkbox")
 							input#agree-checkbox(type="checkbox")
 							span.checkmark
-							span.label I agree to the processing and use of my personal data.
+							span.label 
+								span.ac-mask
+									span I agree to the processing and use of my personal data.
 					
-					button(type="submit")#submit-application.ac-btn.submit-btn.off
+					button(type="submit" disabled)#submit-application.ac-btn.submit-btn
 						span.ac-btn-label Send
 
 					h6.disclaimer 

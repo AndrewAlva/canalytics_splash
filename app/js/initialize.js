@@ -4,7 +4,7 @@
 // subframes to finish loading
 document.addEventListener('DOMContentLoaded', function() {
 	// Form interactions
-		var registerForm = {
+		window.registerForm = {
 			visible: false,
 			show_trigger: $('#show-form'),
 			agree_checkbox: $('#agree-checkbox'),
@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
 				// Listener to able/disable submit form
 				this.agree_trigger.on('click', function(event) {
 					if (registerForm.agree_checkbox.is(':checked')) {
-						registerForm.submit_btn.removeClass('off')
+						// registerForm.submit_btn.removeClass('off')
+						registerForm.submit_btn.removeAttr('disabled')
 					} else {
-						registerForm.submit_btn.addClass('off')
+						// registerForm.submit_btn.addClass('off')
+						registerForm.submit_btn.attr('disabled', true)
 					}
 				});
 			},
@@ -37,12 +39,25 @@ document.addEventListener('DOMContentLoaded', function() {
 				this.show_trigger.on('click', function(event) {
 					event.preventDefault();
 					registerForm.show();
+					$('html, body').animate({
+						scrollTop: $('#register-section').offset().top
+					}, 2000);
 				});
 			},
 			activateListeners: function(){
 				this.toggleListener();
 				this.scrollListener();
 				this.clickListener();
+			},
+
+			success: function(){
+				$('.form-footer').fadeOut(700);
+				$('#application-fields').fadeOut(700, function(){
+					$('#success-message').html("<h4 class='ac-shift'> <span class='ac-target'> You're one step closer. We'll get back to you soon with details to win the sponsorship. </span> </h4> ");
+					$('#success-submit').html("<span class='ac-shift'> <span class='ac-target'> Submitted. </span> </h4> ");
+					$('#success-message').find('.ac-target').addClass('show');
+					$('#success-submit').find('.ac-target').addClass('show');
+				});
 			},
 
 			show: function(){
@@ -63,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
 				this.activateListeners();
 			}
 		}
-		registerForm.init();
 
 		// Labels
 			// Add/remove class to ".ac-input" to change behavior of its own label
@@ -88,12 +102,72 @@ document.addEventListener('DOMContentLoaded', function() {
 				// Check if user is now on mobile
 				isMobile = (window.innerWidth < 768) ? true : false;
 			});
+
+	// Hidden objects
+		window.hiddenElements = {
+			objs: $('.ac-mask').find('span'),
+			show: function(){
+				$.each(hiddenElements.objs, function(index, el) {
+					setTimeout(function(){
+				       $(el).addClass('show');
+				    }, ( index * 100 ));
+				});
+			}
+		}
+
+	// Sponsor includes shifter
+		window.sponsorIncludes = {
+			firstObjs: $('#include-1').find('.ac-shift').find('span'),
+			secondObjs: $('#include-2').find('.ac-shift').find('span'),
+			thirdObjs: $('#include-3').find('.ac-shift').find('span'),
+			interval: 5000,
+			counter: 1,
+
+			toggle: function(objArray, show){
+				$.each(objArray, function(index, el) {
+					setTimeout(function(){
+						if(show){
+							$(el).addClass('show');
+						} else {
+							$(el).removeClass('show');
+						}
+				    }, ( index * 50 ));
+				});
+			},
+
+			shift: function(){
+				if (this.counter == 1) {
+					sponsorIncludes.toggle(sponsorIncludes.firstObjs);
+					sponsorIncludes.toggle(sponsorIncludes.secondObjs, true);
+					sponsorIncludes.counter = 2;
+				} else if (this.counter == 2) {
+					sponsorIncludes.toggle(sponsorIncludes.secondObjs);
+					sponsorIncludes.toggle(sponsorIncludes.thirdObjs, true);
+					sponsorIncludes.counter = 3;
+				} else if (this.counter == 3) {
+					sponsorIncludes.toggle(sponsorIncludes.thirdObjs);
+					sponsorIncludes.toggle(sponsorIncludes.firstObjs, true);
+					sponsorIncludes.counter = 1;
+				}
+			},
+
+			init: function(){
+				setInterval(function(){
+					sponsorIncludes.shift();
+				}, this.interval);
+			}
+		}
 });
 
 
 // Trigger functions after page is completely loaded
 window.onload = function() {
 	// Do something, remove preloader perhaps
-	console.log("Page fully loaded.");
-	console.log("Initialize.js");
+	registerForm.init();
+
+	// Show hidden texts
+	hiddenElements.show();
+
+	// Activate interval of Includes in "sponsor" section
+	sponsorIncludes.init();
 }

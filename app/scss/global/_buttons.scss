@@ -88,7 +88,7 @@
 		@include drawShadow(0,0,20px,2px,#863dee);
 	}
 
-	&.off{
+	&.off, &[disabled]{
 		background: #10123f;
 		pointer-events: none;
 		.ac-btn-label{
@@ -100,5 +100,8 @@
 			@include drawShadow(0,0,0,0,#863dee);
 			@include scale(0,0);
 		}
+	}
+	&[disabled]{
+		// color: red !important;
 	}
 }
