@@ -18,6 +18,10 @@ body{
 		min-height: 600px;
 	}
 
+	@media screen and (max-width: 767px) {
+		height: auto;
+	}
+
 	&.showForm{
 		// min-height: 650px;
 		min-height: 890px;

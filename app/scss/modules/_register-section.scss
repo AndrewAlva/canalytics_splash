@@ -11,6 +11,12 @@
 	@include translate(0,100%);
 	@include trans-register(.4s);
 
+	@media screen and (max-width: 767px) {
+		position: relative;
+		height: auto;
+		@include translate(0,0);
+	}
+
 	.join-wrapper{
 		position: relative;
 		display: inline-block;
@@ -26,6 +32,11 @@
 
 		@media screen and (max-width: 1024px) {
 			padding: 30px 25px;
+		}
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+			padding: 40px 40px 65px;
 		}
 
 		h2{
@@ -44,6 +55,10 @@
 			@media screen and (max-width: 1024px) {
 				font-size: 19px;
 			}
+
+			@media screen and (max-width: 767px) {
+				font-size: 26px;
+			}
 		}
 	}
 	.form-wrapper{
@@ -59,6 +74,10 @@
 		}
 		@media screen and (max-width: 1024px) {
 			padding: 30px;
+		}
+		@media screen and (max-width: 767px) {
+			width: 100%;
+			padding: 40px;
 		}
 
 		.form-title{
@@ -76,6 +95,11 @@
 			@media screen and (max-width: 1024px) {
 				font-size: 19px;
 			}
+
+			@media screen and (max-width: 767px) {
+				font-size: 26px;
+				margin-bottom: 28px;
+			}
 		}
 
 		.form-fields{
@@ -88,8 +112,20 @@
 			.input-container{
 				width: 24.22%;
 
+				&:not(:last-child){
+					margin-right: 25px;
+				}
+
 				@media screen and (max-width: 1399px) {
 					width: 28%;
+				}
+
+				@media screen and (max-width: 767px) {
+					width: 100%;
+					&:not(:last-child){
+						margin: 0;
+						margin-bottom: 32px;
+					}
 				}
 			}
 		}

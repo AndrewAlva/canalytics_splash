@@ -8,12 +8,11 @@
 	line-height: 1em;
 	@include smoothFont;
 
-	&:not(:last-child){
-		margin-right: 25px;
-	}
-
 	@media screen and (max-width: 1399px) {
 		font-size: 14px;
+	}
+	@media screen and (max-width: 767px) {
+		font-size: 18px;
 	}
 
 	&:before{

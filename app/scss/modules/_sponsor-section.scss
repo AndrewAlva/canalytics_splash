@@ -11,6 +11,11 @@
 		width: 54%;
 	}
 
+	@media screen and (max-width: 767px) {
+		width: 100%;
+		height: auto;
+	}
+
 	.info-wrapper{
 		position: relative;
 		width: 100%;
@@ -22,6 +27,10 @@
 			width: 50%;
 			height: 100%;
 			vertical-align: top;
+
+			@media screen and (max-width: 767px) {
+				width: 100%;
+			}
 
 			.title{
 				font-family: 'Calibre';
@@ -115,6 +124,11 @@
 			@media screen and (max-width: 1399px) {
 				padding: 35px 30px;
 			}
+
+			@media screen and (max-width: 767px) {
+				height: 290px;
+				margin-top: 337px;
+			}
 		}
 		.what-wrap{
 			padding: 55px 50px 60px;
@@ -122,6 +136,13 @@
 
 			@media screen and (max-width: 1399px) {
 				padding: 32px 30px 35px;
+			}
+
+			@media screen and (max-width: 767px) {
+				position: absolute;
+				display: block;
+				height: 337px;
+				top: 0;
 			}
 		}
 	}
@@ -138,6 +159,10 @@
 			padding: 40px;
 		}
 
+		@media screen and (max-width: 767px) {
+			height: 145px;
+		}
+
 		.tagline{
 			font-size: 38px;
 			font-weight: 400;
@@ -146,6 +171,9 @@
 
 			@media screen and (max-width: 1399px) {
 				font-size: 26px;
+			}
+			@media screen and (max-width: 767px) {
+				font-size: 24px;
 			}
 		}
 
