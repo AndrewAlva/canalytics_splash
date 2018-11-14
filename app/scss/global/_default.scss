@@ -21,5 +21,13 @@ body{
 	&.showForm{
 		// min-height: 650px;
 		min-height: 890px;
+
+		@media screen and (max-width: 1399px) {
+			min-height: 800px;
+		}
+
+		@media screen and (max-width: 1024px) {
+			min-height: 768px;
+		}
 	}
 }

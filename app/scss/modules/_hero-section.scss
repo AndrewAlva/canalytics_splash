@@ -8,6 +8,10 @@
 	background-color: #f4f5f6;
 	@include trans-register(.4s);
 
+	@media screen and (max-width: 1024px) {
+		width: 46%;
+	}
+
 	@media screen and (max-width: 1399px) {
 		padding: 35px;
 
@@ -23,8 +27,15 @@
 
 		@media screen and (max-width: 1399px) {
 			width: 240px;
-			top: 20px;
+			height: 240px;
+			top: 70px;
 			right: 60px;
+		}
+
+		@media screen and (max-width: 1024px) {
+			width: 170px;
+			height: 170px;
+			top: 10%;
 		}
 	}
 
@@ -39,6 +50,10 @@
 			bottom: 80px;
 		}
 
+		@media screen and (max-width: 1024px) {
+			bottom: 120px;
+		}
+
 		.hero-title{
 			font-family: 'Platform';
 			font-size: 80px;
@@ -51,6 +66,10 @@
 			@media screen and (max-width: 1399px) {
 				font-size: 60px;
 				margin-bottom: 24px;
+			}
+
+			@media screen and (max-width: 1024px) {
+				font-size: 50px;
 			}
 		}
 
@@ -87,6 +106,12 @@
 				font-size: 16px;
 			}
 
+			@media screen and (max-width: 1024px) {
+				display: block;
+				margin-top: 20px;
+				margin-left: 18px;
+			}
+
 			&:before{
 				content: '/';
 				position: absolute;
@@ -103,7 +128,7 @@
 	// height: calc(100% - 225px);
 
 	@media screen and (max-width: 1399px) {
-		height: 77%;
+		height: 76%;
 	}
 
 	.texts-wrapper{
@@ -111,6 +136,10 @@
 
 		@media screen and (max-width: 1399px) {
 			@include translate(0, 30px);
+		}
+
+		@media screen and (max-width: 1024px) {
+			bottom: 80px;
 		}
 	}
 }

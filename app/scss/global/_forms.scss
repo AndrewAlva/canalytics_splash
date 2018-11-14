@@ -2,7 +2,6 @@
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	width: 24.22%;
 	font-family: 'Calibre';
 	font-size: 20px;
 	font-weight: lighter;
@@ -103,6 +102,12 @@
 		height: 18px;
 		border: 1px solid #868da4;
 
+		@media screen and (max-width: 1399px) {
+			top: 4px;
+			width: 16px;
+			height: 16px;
+		}
+
 		&:before{
 			content: '';
 			position: absolute;
@@ -116,6 +121,11 @@
 			@include scale(0,0);
 			opacity: 0;
 			@include transitions-ease(.4s);
+
+			@media screen and (max-width: 1399px) {
+				width: 4px;
+				height: 4px;
+			}
 		}
 	}
 

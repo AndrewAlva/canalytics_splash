@@ -11,10 +11,6 @@
 	@include translate(0,100%);
 	@include trans-register(.4s);
 
-	@media screen and (max-width: 1399px) {
-		max-height: 220px;
-	}
-
 	.join-wrapper{
 		position: relative;
 		display: inline-block;
@@ -26,6 +22,10 @@
 
 		@media screen and (max-width: 1399px) {
 			padding: 40px 30px;
+		}
+
+		@media screen and (max-width: 1024px) {
+			padding: 30px 25px;
 		}
 
 		h2{
@@ -40,6 +40,10 @@
 			@media screen and (max-width: 1399px) {
 				font-size: 26px;
 			}
+
+			@media screen and (max-width: 1024px) {
+				font-size: 19px;
+			}
 		}
 	}
 	.form-wrapper{
@@ -53,6 +57,9 @@
 		@media screen and (max-width: 1399px) {
 			padding: 40px;
 		}
+		@media screen and (max-width: 1024px) {
+			padding: 30px;
+		}
 
 		.form-title{
 			font-family: 'Calibre';
@@ -65,10 +72,26 @@
 			@media screen and (max-width: 1399px) {
 				font-size: 26px;
 			}
+
+			@media screen and (max-width: 1024px) {
+				font-size: 19px;
+			}
 		}
 
 		.form-fields{
 			margin-bottom: 30px;
+
+			@media screen and (max-width: 1399px) {
+				margin-bottom: 20px;
+			}
+
+			.input-container{
+				width: 24.22%;
+
+				@media screen and (max-width: 1399px) {
+					width: 28%;
+				}
+			}
 		}
 
 		.data-agreement{
@@ -77,7 +100,8 @@
 			margin-left: 190px;
 
 			@media screen and (max-width: 1399px) {
-				margin-top: 5px;
+				padding-top: 7px;
+				margin-left: 150px;
 			}
 		}
 
@@ -91,6 +115,6 @@
 	@include translate(0,0);
 
 	@media screen and (max-width: 1399px) {
-		height: 23%;	
+		height: 24%;	
 	}
 }

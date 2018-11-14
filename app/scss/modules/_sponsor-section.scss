@@ -7,6 +7,10 @@
 	vertical-align: top;
 	@include trans-register(.4s);
 
+	@media screen and (max-width: 1024px) {
+		width: 54%;
+	}
+
 	.info-wrapper{
 		position: relative;
 		width: 100%;
@@ -157,6 +161,11 @@
 				width: 135px;
 				height: 135px;
 			}
+
+			@media screen and (max-width: 1024px) {
+				width: 115px;
+				height: 115px;
+			}
 		}
 	}
 }
@@ -167,6 +176,6 @@
 	// height: calc(100% - 225px);
 
 	@media screen and (max-width: 1399px) {
-		height: 77%;
+		height: 76%;
 	}
 }

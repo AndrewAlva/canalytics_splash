@@ -41,6 +41,7 @@
 	background: #10123f;
 
 	@media screen and (max-width: 1399px) {
+		font-size: 16px;
 		padding: 16px 40px 12px;
 	}
 
@@ -56,6 +57,11 @@
 	font-size: 16px;
 	padding: 16px 52px;
 	background: #030524;
+
+	@media screen and (max-width: 1399px) {
+		font-size: 14px;
+		padding: 11px 40px 9px;
+	}
 
 	.ac-btn-label{@include transitions-ease(.4s);}
 
