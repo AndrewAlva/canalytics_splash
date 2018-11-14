@@ -10,6 +10,10 @@
 	line-height: 1em;
 	@include smoothFont;
 
+	@media screen and (max-width: 1399px) {
+		font-size: 14px;
+	}
+
 	&:before{
 		content: '';
 		position: absolute;
@@ -26,6 +30,10 @@
 		color: #fff;
 		border: none;
 		background-color: transparent;
+
+		@media screen and (max-width: 1399px) {
+			padding-bottom: 8px;
+		}
 
 		&:focus, &.filled{
 			outline: none;
@@ -56,6 +64,11 @@
 	@include smoothFont;
 	color: #868da4;
 	cursor: pointer;
+
+	@media screen and (max-width: 1399px) {
+		font-size: 14px;
+		padding-top: 4px;
+	}
 
 	input{
 		position: absolute;

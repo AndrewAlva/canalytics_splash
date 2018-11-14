@@ -10,6 +10,10 @@
 	@include translate(0,100%);
 	@include trans-register(.4s);
 
+	@media screen and (max-width: 1399px) {
+		max-height: 220px;
+	}
+
 	.join-wrapper{
 		position: relative;
 		display: inline-block;
@@ -70,6 +74,10 @@
 		.data-agreement{
 			position: relative;
 			margin-top: 25px;
+
+			@media screen and (max-width: 1399px) {
+				margin-top: 5px;
+			}
 		}
 	}
 }
@@ -77,4 +85,8 @@
 // Showing form state
 .showForm #register-section{
 	@include translate(0,0);
+
+	@media screen and (max-width: 1399px) {
+		height: 23%;	
+	}
 }

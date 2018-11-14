@@ -102,6 +102,10 @@
 	height: 71%;
 	// height: calc(100% - 225px);
 
+	@media screen and (max-width: 1399px) {
+		height: 77%;
+	}
+
 	.texts-wrapper{
 		@include translate(0, 100px);
 

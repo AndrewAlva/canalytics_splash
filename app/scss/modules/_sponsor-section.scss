@@ -165,4 +165,8 @@
 .showForm #sponsor-section{
 	height: 71%;
 	// height: calc(100% - 225px);
+
+	@media screen and (max-width: 1399px) {
+		height: 77%;
+	}
 }
