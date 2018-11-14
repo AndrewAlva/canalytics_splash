@@ -1,33 +1,81 @@
-.ac-mask, .ac-mask > span, .ac-shift, .ac-shift > span{
-	display: block;
-}
+// Loaded curtain
+#loading-curtain{
+	z-index: 1000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0; left: 0;
+	background-color: #f4f5f6;
+	@include drawShadow(0, 0, 30px, 0, rgba(0,0,0,.1));
+	@include trans-register(1.3s);
 
-.ac-mask{
-	// overflow: hidden;
-}
+	.loading-logo{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		margin: auto;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		@include trans-register(1.3s);
 
-.ac-mask > span{
-	@include trans-register(.7s);
-	@include translate(-20%, 0);
-	opacity: 0;
+		svg{
+			width: 100%;
+		}
+	}
 
-	&.show{
-		@include translate(0,0);
-		opacity: 1;
+	&.loaded{
+		@include translate(0, -100%);
+
+		.loading-logo{
+			opacity: 0;
+		}
 	}
 }
 
-.ac-shift{
-	overflow: hidden;
+
+// Icon intro
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
-.ac-shift > span{
-	@include trans-register(.7s);
-	@include translate(0, 120%);
-	opacity: 0;
+// Containers intro
 
-	&.show{
-		@include translate(0, 0);
-		opacity: 1;
+
+// Support elements intro
+
+
+// Texts intro
+	.ac-mask, .ac-mask > span, .ac-shift, .ac-shift > span{
+		display: block;
 	}
-}
+
+	.ac-mask{
+		// overflow: hidden;
+	}
+
+	.ac-mask > span{
+		@include trans-register(.7s);
+		@include translate(-20%, 0);
+		opacity: 0;
+
+		&.show{
+			@include translate(0,0);
+			opacity: 1;
+		}
+	}
+
+	.ac-shift{
+		overflow: hidden;
+	}
+
+	.ac-shift > span{
+		@include trans-register(.7s);
+		@include translate(0, 120%);
+		opacity: 0;
+
+		&.show{
+			@include translate(0, 0);
+			opacity: 1;
+		}
+	}

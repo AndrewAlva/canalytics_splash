@@ -7,6 +7,11 @@
 	padding: 60px;
 	background-color: #f4f5f6;
 	@include trans-register(.4s);
+	&.loading{
+		width: 100%;
+		-webkit-animation: fadeIn 1.5s linear; /* Safari 4.0 - 8.0 */
+    	animation: fadeIn 1.5s linear;
+	}
 
 	@media screen and (max-width: 1399px) {
 		padding: 35px;
@@ -31,10 +36,25 @@
 		}
 	}
 
-	.brand-c-bg{
+	.brand-c-container{
 		position: absolute;
+		width: 340px;
+		height: 340px;
 		top: 80px;
-		right: 110px;
+		right: 100px;
+		@include transitions-ease-delayed(.8s, .8s);
+
+		svg{@include transitions-ease(.8s);}
+
+		&.loading{
+			top: 50%;
+			right: 50%;
+			@include translate(50%, -50%);
+
+			svg{
+				@include scale(.15, .15);
+			}
+		}
 
 		@media screen and (max-width: 1399px) {
 			width: 240px;
@@ -54,6 +74,11 @@
 			height: 160px;
 			top: 40px;
 			right: 40px;
+		}
+
+		svg{
+			position: relative;
+			width: 100%;
 		}
 	}
 

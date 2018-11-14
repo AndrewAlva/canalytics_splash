@@ -3,8 +3,14 @@ extends views/layout.jade
 block content
 	//- .tester
 	section#hero-section
-		include includes/svg-brand-logo.jade
-		include includes/svg-brand-c.jade
+		span.ac-mask
+			span
+				include includes/svg-brand-logo.jade
+
+		.brand-c-container
+			span.ac-mask
+				span
+					include includes/svg-brand-c.jade
 		
 		.texts-wrapper
 			h1.hero-title
@@ -25,15 +31,17 @@ block content
 				span.ac-mask
 					span production results.
 
-			.cta-container
-				button#show-form.ac-btn.cta-btn
-					span.ac-mask
-						span Apply now
-				h6.disclaimer 
-					span.ac-mask
-						span Registration doesn’t guarantee
-					span.ac-mask
-						span admittance to the program.
+			span.ac-mask
+				span
+					.cta-container
+						button#show-form.ac-btn.cta-btn
+							span.ac-mask
+								span Apply now
+						h6.disclaimer 
+							span.ac-mask
+								span Registration doesn’t guarantee
+							span.ac-mask
+								span admittance to the program.
 
 	section#sponsor-section
 		.info-wrapper
@@ -173,3 +181,7 @@ block content
 						span.ac-mask
 							span admittance to the program.
 
+	
+	section#loading-curtain
+		.loading-logo
+			include includes/svg-brand-c.jade

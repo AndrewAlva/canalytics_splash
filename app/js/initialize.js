@@ -176,17 +176,53 @@ document.addEventListener('DOMContentLoaded', function() {
 				}, this.interval);
 			}
 		}
+
+	// Loader
+		window.acLoader = {
+			placeLogo: function(){
+				$('.brand-c-container').removeClass('loading');
+			},
+			layBoxes: function(){
+				$('#hero-section').removeClass('loading');
+			},
+
+			openCurtain: function(){
+				$('#loading-curtain').addClass('loaded');
+
+				setTimeout(function(){
+					$('#loading-curtain').remove();
+					hiddenElements.show();
+					sponsorIncludes.init();
+
+					setTimeout(function(){
+						$('.badge').removeClass('loading');
+					},5000);
+				}, 1300);
+			},
+
+			init: function(){
+				// setTimeout(function(){
+				// 	acLoader.placeLogo();
+				// 	setTimeout(function(){
+				// 		acLoader.layBoxes();
+				// 	},1800);
+				// }, 1800);
+
+				this.openCurtain();
+			}
+		}
 });
 
 
 // Trigger functions after page is completely loaded
 window.onload = function() {
 	// Do something, remove preloader perhaps
+	acLoader.init();
 	registerForm.init();
 
 	// Show hidden texts
-	hiddenElements.show();
+	// hiddenElements.show();
 
 	// Activate interval of Includes in "sponsor" section
-	sponsorIncludes.init();
+	// sponsorIncludes.init();
 }

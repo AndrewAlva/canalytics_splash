@@ -13,6 +13,28 @@
 	     -o-transition: all $timing cubic-bezier(.3,0,.2,1);
 	        transition: all $timing cubic-bezier(.3,0,.2,1);
 }
+@mixin transitions-ease-delayed($timing, $delay){
+	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+	   -moz-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+	    -ms-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+	     -o-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+	        transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+}
+
+@mixin double-trans-ease($attr1, $timing1, $attr2, $timing2){
+	-webkit-transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1;
+	   -moz-transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1;
+	    -ms-transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1;
+	     -o-transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1;
+	        transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1;
+}
+@mixin triple-trans-ease($attr1, $timing1, $attr2, $timing2, $attr3, $timing3){
+	-webkit-transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1, $attr3 $timing3 cubic-bezier(.3,0,.2,1) $timing2;
+	   -moz-transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1, $attr3 $timing3 cubic-bezier(.3,0,.2,1) $timing2;
+	    -ms-transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1, $attr3 $timing3 cubic-bezier(.3,0,.2,1) $timing2;
+	     -o-transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1, $attr3 $timing3 cubic-bezier(.3,0,.2,1) $timing2;
+	        transition: $attr1 $timing1 cubic-bezier(.3,0,.2,1), $attr2 $timing2 cubic-bezier(.3,0,.2,1) $timing1, $attr3 $timing3 cubic-bezier(.3,0,.2,1) $timing2;
+}
 
 @mixin transitions-linear($timing){
 	-webkit-transition: all $timing linear;
