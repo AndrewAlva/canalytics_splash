@@ -44,6 +44,11 @@
 					font-size: 26px;
 					margin-bottom: 30px;
 				}
+
+				@media screen and (max-width: 767px) {
+					font-size: 28px;
+					margin-bottom: 15px;
+				}
 			}
 
 			.include-box{
@@ -62,6 +67,10 @@
 					@media screen and (max-width: 1399px) {
 						font-size: 20px;
 					}
+
+					@media screen and (max-width: 767px) {
+						font-size: 16px;
+					}
 				}
 
 				.description{
@@ -72,7 +81,11 @@
 
 					@media screen and (max-width: 1399px) {
 						font-size: 22px;
-						line-height: 1.1em;
+						line-height: 1.08em;
+					}
+
+					@media screen and (max-width: 767px) {
+						font-size: 23px;
 					}
 				}
 			}
@@ -88,6 +101,10 @@
 				@media screen and (max-width: 1399px) {
 					font-size: 30px;
 				}
+				@media screen and (max-width: 767px) {
+					font-size: 28px;
+					margin-bottom: 15px;
+				}
 			}
 
 			.sponsor-value{
@@ -98,6 +115,9 @@
 
 				@media screen and (max-width: 1399px) {
 					font-size: 26px;
+				}
+				@media screen and (max-width: 767px) {
+					font-size: 24px;
 				}
 			}
 
@@ -129,6 +149,7 @@
 			@media screen and (max-width: 767px) {
 				height: 290px;
 				margin-top: 337px;
+				padding: 40px;
 			}
 		}
 		.what-wrap{
@@ -143,6 +164,7 @@
 				position: absolute;
 				display: block;
 				height: 337px;
+				padding: 40px;
 				top: 0;
 			}
 		}

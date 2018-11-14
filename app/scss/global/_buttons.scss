@@ -55,6 +55,13 @@
 		height: 80%;
 		bottom: 0;
 		@include drawShadow(0,0,24px,4px,#863dee);
+
+		@media screen and (max-width: 767px) {
+			width: 78%;
+			height: 70%;
+			bottom: 4%;
+			@include drawShadow(0,0,20px,4px,#863dee);
+		}
 	}
 }
 
