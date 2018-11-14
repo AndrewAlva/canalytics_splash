@@ -1,4 +1,5 @@
 <?php
+	$sender = "studio@mandelbrot.mx";
 	$recipient = "andrew@mandelbrot.mx";
 	$subject = "AC Green Ticket | Sponsorship Request";
 
@@ -7,7 +8,7 @@
 	$tel = $_POST['tel'];
 
 	$formcontent="Hey gents, this is a new user submitting their info to request sponsorship from advancedcanalytics.com; this is what they say:\n\nName: $name\nEmail: $email\nPhone: $tel.\n\n";
-	$mailheader = "From: $email \r\n";
+	$mailheader = "From: $sender \r\n";
 
 	// Write in the .txt file
 	$new_subscriber = "Full name: $name, Phone: $tel, Email: $email"."\n";
