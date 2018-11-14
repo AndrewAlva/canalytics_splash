@@ -76,9 +76,9 @@
 
 	&:before{
 		width: 78%;
-		height: 70%;
+		height: 40%;
 		bottom: 4%;
-		@include drawShadow(0,0,30px,2px,#863dee);
+		@include drawShadow(0,0,20px,2px,#863dee);
 	}
 
 	&.off{

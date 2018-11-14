@@ -70,6 +70,10 @@
 		font-size: 14px;
 		padding-top: 4px;
 	}
+	@media screen and (max-width: 767px) {
+		padding-top: 5px;
+		line-height: 1em;
+	}
 
 	input{
 		position: absolute;
@@ -107,6 +111,11 @@
 			height: 16px;
 		}
 
+		@media screen and (max-width: 767px) {
+			width: 24px;
+			height: 24px;
+		}
+
 		&:before{
 			content: '';
 			position: absolute;
@@ -124,6 +133,11 @@
 			@media screen and (max-width: 1399px) {
 				width: 4px;
 				height: 4px;
+			}
+
+			@media screen and (max-width: 767px) {
+				width: 8px;
+				height: 8px;
 			}
 		}
 	}

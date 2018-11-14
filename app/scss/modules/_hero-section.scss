@@ -179,5 +179,10 @@
 		@media screen and (max-width: 1024px) {
 			bottom: 80px;
 		}
+
+		@media screen and (max-width: 767px) {
+			bottom: auto;
+			@include translate(0, 0);
+		}
 	}
 }

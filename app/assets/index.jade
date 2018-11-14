@@ -1,7 +1,7 @@
 extends views/layout.jade
 
 block content
-	.tester
+	//- .tester
 	section#hero-section
 		include includes/svg-brand-logo.jade
 		include includes/svg-brand-c.jade
@@ -88,7 +88,9 @@ block content
 							span the end of the three
 						span.ac-mask
 							span grow cycles
-
+				
+				include includes/svg-cta-badge.jade
+				
 			.inner-wrap.what-wrap
 				h2.sponsor-title
 					span.ac-mask
@@ -115,7 +117,6 @@ block content
 					span Growth 
 				span.ac-mask
 					span Intelligence
-			include includes/svg-cta-badge.jade
 
 	section#register-section
 		.join-wrapper

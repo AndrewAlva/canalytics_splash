@@ -77,7 +77,7 @@
 		}
 		@media screen and (max-width: 767px) {
 			width: 100%;
-			padding: 40px;
+			padding: 40px 40px 73px;
 		}
 
 		.form-title{
@@ -138,6 +138,13 @@
 			@media screen and (max-width: 1399px) {
 				padding-top: 7px;
 				margin-left: 150px;
+			}
+
+			@media screen and (max-width: 767px) {
+				position: relative;
+				width: 210px;
+				margin-left: 0;
+				margin-bottom: 28px;
 			}
 		}
 
