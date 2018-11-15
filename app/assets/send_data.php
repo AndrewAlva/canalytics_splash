@@ -1,5 +1,5 @@
 <?php
-	$recipient = "andrew@mandelbrot.mx";
+	$recipient = "rh@advancedcanalytics.com, andrew@mandelbrot.mx";
 	$subject = "AC Green Ticket | Sponsorship Request";
 
 	$name = $_POST['name'];
