@@ -144,6 +144,16 @@
 
 	.label{
 		@include transitions-linear(.2s);
+
+		a{
+			color: inherit;
+			text-decoration: underline;
+			@include transitions-linear(.1s);
+
+			&:hover{
+				color: #fff;
+			}
+		}
 	}
 }
 

@@ -1,187 +1,193 @@
 extends views/layout.jade
 
+block title
+	| Grower Sponsorship
+
 block content
-	//- .tester
-	section#hero-section
-		span.ac-mask
-			span
-				include includes/svg-brand-logo.jade
-
-		.brand-c-container
+	#main-wrapper
+		//- .tester
+		section#hero-section
 			span.ac-mask
 				span
-					include includes/svg-brand-c.jade
-		
-		.texts-wrapper
-			h1.hero-title
-				span.ac-mask
-					span Cannabis
-				span.ac-mask
-					span Cultivation
-				span.ac-mask
-					span to the
-				span.ac-mask
-					span Next Level
+					include includes/svg-brand-logo.jade
 
-			h2.hero-intro
+			.brand-c-container
 				span.ac-mask
-					span Use data and precision Ag
-				span.ac-mask
-					span Tech to maximize your
-				span.ac-mask
-					span production results.
+					span
+						include includes/svg-brand-c.jade
+			
+			.texts-wrapper
+				h1.hero-title
+					span.ac-mask
+						span Cannabis
+					span.ac-mask
+						span Cultivation
+					span.ac-mask
+						span to the
+					span.ac-mask
+						span Next Level
 
-			span.ac-mask
-				span
-					.cta-container
-						button#show-form.ac-btn.cta-btn
-							span.ac-mask
-								span Apply now
+				h2.hero-intro
+					span.ac-mask
+						span Use data and precision Ag
+					span.ac-mask
+						span Tech to maximize your
+					span.ac-mask
+						span production results.
+
+				span.ac-mask
+					span
+						.cta-container
+							button#show-form.ac-btn.cta-btn
+								span.ac-mask
+									span Apply now
+							h6.disclaimer 
+								span.ac-mask
+									span Registration doesn’t guarantee
+								span.ac-mask
+									span admittance to the program.
+
+		section#sponsor-section
+			.info-wrapper
+				.inner-wrap.includes-wrap
+					h5.title
+						span.ac-mask
+							span Includes
+					#include-1.include-box
+						.index 
+							span.ac-mask.ac-shift
+								span 01.
+
+						p.description
+							span.ac-mask.ac-shift
+								span Three grow cycles of
+							span.ac-mask.ac-shift
+								span Precision Ag Tech 
+							span.ac-mask.ac-shift
+								span product clinically 
+							span.ac-mask.ac-shift
+								span proven to increase 
+							span.ac-mask.ac-shift
+								span yields over 40%.
+
+					#include-2.include-box
+						.index 
+							span.ac-shift
+								span 02.
+
+						p.description
+							span.ac-shift
+								span Proprietary data
+							span.ac-shift
+								span analytics engine to
+							span.ac-shift
+								span further maximize
+							span.ac-shift
+								span grow yields and
+							span.ac-shift
+								span solution sets.
+
+					#include-3.include-box
+						.index 
+							span.ac-shift
+								span 03.
+
+						p.description
+							span.ac-shift
+								span Optimized cultivation
+							span.ac-shift
+								span report delivered at
+							span.ac-shift
+								span the end of the three
+							span.ac-shift
+								span grow cycles.
+					
+					include includes/svg-cta-badge.jade
+
+				.inner-wrap.what-wrap
+					h2.sponsor-title
+						span.ac-mask
+							span Exclusive
+						span.ac-mask
+							span Grower
+						span.ac-mask
+							span Sponsorship
+
+					h5.sponsor-value
+						span.ac-mask
+							span Valued over
+						span.ac-mask
+							span $50, 000
+
+					p.sponsor-duration
+						span.ac-mask
+							span One Year Free!
+					
+
+			.tagline-wrapper
+				h3.tagline
+					span.ac-mask
+						span Growth 
+					span.ac-mask
+						span Intelligence
+
+		section#register-section
+			.join-wrapper
+				h2 
+					span.ac-mask
+						span Join to The New
+					span.ac-mask
+						span Generation of
+					span.ac-mask
+						span Growers
+			
+			.form-wrapper
+				form(action="#")
+					h5.form-title 
+						span.ac-mask
+							span Application 
+								span#success-submit 
+									//- span.ac-shift
+										span Submitted.
+					
+					#application-fields.form-fields
+						.input-container
+							input#name-input.ac-input(type="text")
+							label(for="name-input") Full Name
+						
+						.input-container
+							input#email-input.ac-input(type="text")
+							label(for="email-input") Email
+						
+						.input-container
+							input#phone-input.ac-input(type="text")
+							label(for="phone-input") Phone Number
+					
+					span#success-message 
+						//- h4.ac-shift 
+							span.show You're one step closer. We'll get back to you soon with details to win the sponsorship.
+
+					.form-footer
+						div.data-agreement#user-agree
+							label.ac-checkbox(for="agree-checkbox")
+								input#agree-checkbox(type="checkbox")
+								span.checkmark
+								span.label 
+									span.ac-mask
+										span
+											|I agree to the 
+											a(href="terms.html" target="_blank") terms of service and partnership
+						
+						button(type="submit" disabled)#submit-application.ac-btn.submit-btn
+							span.ac-btn-label Send
+
 						h6.disclaimer 
 							span.ac-mask
 								span Registration doesn’t guarantee
 							span.ac-mask
 								span admittance to the program.
 
-	section#sponsor-section
-		.info-wrapper
-			.inner-wrap.includes-wrap
-				h5.title
-					span.ac-mask
-						span Includes
-				#include-1.include-box
-					.index 
-						span.ac-mask.ac-shift
-							span 01.
-
-					p.description
-						span.ac-mask.ac-shift
-							span Three grow cycles of
-						span.ac-mask.ac-shift
-							span Precision Ag Tech 
-						span.ac-mask.ac-shift
-							span product clinically 
-						span.ac-mask.ac-shift
-							span proven to increase 
-						span.ac-mask.ac-shift
-							span yields over 40%.
-
-				#include-2.include-box
-					.index 
-						span.ac-shift
-							span 02.
-
-					p.description
-						span.ac-shift
-							span Proprietary data
-						span.ac-shift
-							span analytics engine to
-						span.ac-shift
-							span further maximize
-						span.ac-shift
-							span grow yields and
-						span.ac-shift
-							span solution sets.
-
-				#include-3.include-box
-					.index 
-						span.ac-shift
-							span 03.
-
-					p.description
-						span.ac-shift
-							span Optimized cultivation
-						span.ac-shift
-							span report delivered at
-						span.ac-shift
-							span the end of the three
-						span.ac-shift
-							span grow cycles.
-				
-				include includes/svg-cta-badge.jade
-
-			.inner-wrap.what-wrap
-				h2.sponsor-title
-					span.ac-mask
-						span Exclusive
-					span.ac-mask
-						span Grower
-					span.ac-mask
-						span Sponsorship
-
-				h5.sponsor-value
-					span.ac-mask
-						span Valued over
-					span.ac-mask
-						span $50, 000
-
-				p.sponsor-duration
-					span.ac-mask
-						span One Year Free!
-				
-
-		.tagline-wrapper
-			h3.tagline
-				span.ac-mask
-					span Growth 
-				span.ac-mask
-					span Intelligence
-
-	section#register-section
-		.join-wrapper
-			h2 
-				span.ac-mask
-					span Join to The New
-				span.ac-mask
-					span Generation of
-				span.ac-mask
-					span Growers
 		
-		.form-wrapper
-			form(action="#")
-				h5.form-title 
-					span.ac-mask
-						span Application 
-							span#success-submit 
-								//- span.ac-shift
-									span Submitted.
-				
-				#application-fields.form-fields
-					.input-container
-						input#name-input.ac-input(type="text")
-						label(for="name-input") Full Name
-					
-					.input-container
-						input#email-input.ac-input(type="text")
-						label(for="email-input") Email
-					
-					.input-container
-						input#phone-input.ac-input(type="text")
-						label(for="phone-input") Phone Number
-				
-				span#success-message 
-					//- h4.ac-shift 
-						span.show You're one step closer. We'll get back to you soon with details to win the sponsorship.
-
-				.form-footer
-					div.data-agreement#user-agree
-						label.ac-checkbox(for="agree-checkbox")
-							input#agree-checkbox(type="checkbox")
-							span.checkmark
-							span.label 
-								span.ac-mask
-									span I agree to the processing and use of my personal data.
-					
-					button(type="submit" disabled)#submit-application.ac-btn.submit-btn
-						span.ac-btn-label Send
-
-					h6.disclaimer 
-						span.ac-mask
-							span Registration doesn’t guarantee
-						span.ac-mask
-							span admittance to the program.
-
-	
-	section#loading-curtain
-		.loading-logo
-			include includes/svg-brand-c.jade
+		section#loading-curtain
+			.loading-logo
+				include includes/svg-brand-c.jade
