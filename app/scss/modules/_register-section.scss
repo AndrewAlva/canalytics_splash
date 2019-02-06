@@ -38,7 +38,7 @@
 
 		@media screen and (min-width: 768px) {
 			width: 25%;
-			padding: 30px 25px;
+			padding: 50px 25px;
 		}
 
 		@media screen and (min-width: 1025px) {
@@ -77,7 +77,7 @@
 			@media screen and (min-width: 768px) {
 				height: initial;
 				top: auto;
-				bottom: 30px;
+				bottom: 50px;
 				right: 25px;
 			}
 			@media screen and (min-width: 1025px) {
@@ -100,10 +100,10 @@
 		
 		@media screen and (min-width: 768px) {
 			width: 75%;
-			padding: 30px;
+			padding: 50px 50px;
 		}
 		@media screen and (min-width: 1025px) {
-			padding: 40px;
+			// padding: 40px;
 		}
 		@media screen and (min-width: 1400px) {
 			padding: 80px 60px;
@@ -113,42 +113,64 @@
 			margin-bottom: 56px;
 			font-family: 'Maison-b';
 			font-weight: lighter;
-			font-size: 26px;
+			font-size: 25px;
 			letter-spacing: -.04em;
-			line-height: 1em;
+			line-height: 1.2em;
 			@include smoothFont;
 			color: #868da4;
 
 			@media screen and (min-width: 768px) {
-				font-size: 19px;
+				font-size: 34px;
+				margin-bottom: 76px;
 			}
 			@media screen and (min-width: 1025px) {
-				font-size: 26px;
+				// font-size: 26px;
 			}
 			@media screen and (min-width: 1400px) {
 				font-size: 40px;
+				margin-bottom: 110px;
+			}
+		}
+
+		.badge{
+			position: absolute;
+			top: 50px;
+			right: 28px;
+			width: 110px;
+			height: 110px;
+
+			@media screen and (min-width: 768px) {
+				top: 40px;
+				right: 50px;
+				width: 140px;
+				height: 140px;
+			}
+
+			@media screen and (min-width: 1400px) {
+				top: 70px;
+				right: 80px;
+				width: 180px;
+				height: 180px;
 			}
 		}
 
 		.form-title{
 			font-family: 'Calibre';
-			font-size: 39px;
+			font-size: 26px;
 			line-height: 1em;
 			@include smoothFont;
 			color: #fff;
-			margin-bottom: 12px;
+			margin-bottom: 45px;
 
-			@media screen and (max-width: 1399px) {
-				font-size: 26px;
-			}
-
-			@media screen and (max-width: 1024px) {
+			@media screen and (min-width: 768px) {
 				font-size: 19px;
+				margin-bottom: 12px;
 			}
-
-			@media screen and (max-width: 767px) {
+			@media screen and (min-width: 1025px) {
 				font-size: 26px;
-				margin-bottom: 28px;
+			}
+			@media screen and (min-width: 1400px) {
+				font-size: 39px;
 			}
 		}
 
