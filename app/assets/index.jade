@@ -133,19 +133,28 @@ block content
 
 		section#register-section
 			.join-wrapper
-				h2 
+				.brand-c-container
+					include includes/svg-brand-c.jade
+
+				h3.tagline 
+					|Growth
+					br
+					|Intelligence
+
+
+			.form-wrapper
+				h2.join-cta
 					span.ac-mask
 						span Join to The New
 					span.ac-mask
 						span Generation of
 					span.ac-mask
 						span Growers
-			
-			.form-wrapper
+
 				form(action="#")
 					h5.form-title 
 						span.ac-mask
-							span Application 
+							span Apply here 
 								span#success-submit 
 									//- span.ac-shift
 										span Submitted.

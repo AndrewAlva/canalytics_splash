@@ -155,27 +155,25 @@
 
 // Showing form state
 .showForm #hero-section{
-	height: 71%;
-	// height: calc(100% - 225px);
 
 	@media screen and (max-width: 1399px) {
-		height: 76%;
+		// height: 76%;
 	}
 
 	.texts-wrapper{
-		@include translate(0, 100px);
+		// @include translate(0, 100px);
 
-		@media screen and (max-width: 1399px) {
-			@include translate(0, 30px);
-		}
+		// @media screen and (max-width: 1399px) {
+		// 	@include translate(0, 30px);
+		// }
 
-		@media screen and (max-width: 1024px) {
-			bottom: 80px;
-		}
+		// @media screen and (max-width: 1024px) {
+		// 	bottom: 80px;
+		// }
 
-		@media screen and (max-width: 767px) {
-			bottom: auto;
-			@include translate(0, 0);
-		}
+		// @media screen and (max-width: 767px) {
+		// 	bottom: auto;
+		// 	@include translate(0, 0);
+		// }
 	}
 }
