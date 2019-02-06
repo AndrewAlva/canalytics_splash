@@ -68,11 +68,12 @@
 .submit-btn{
 	font-size: 16px;
 	padding: 16px 52px;
+	margin-bottom: 20px;
 	background: #030524;
 
 	@media screen and (max-width: 1399px) {
 		font-size: 14px;
-		padding: 11px 40px 9px;
+		padding: 11px 38px 9px;
 	}
 
 	.ac-btn-label{@include transitions-ease(.4s);}

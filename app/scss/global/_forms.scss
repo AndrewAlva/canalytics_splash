@@ -3,19 +3,12 @@
 	display: inline-block;
 	vertical-align: top;
 	font-family: 'Calibre';
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: lighter;
 	line-height: 1em;
 	@include smoothFont;
 
-	@media screen and (max-width: 1399px) {
-		font-size: 14px;
-	}
-	@media screen and (max-width: 767px) {
-		font-size: 18px;
-	}
-
-	&:before{
+	&:before, .border-fx{
 		content: '';
 		position: absolute;
 		display: block;
@@ -25,24 +18,32 @@
 		bottom: 0;
 		background-color: #868da4;
 	}
+	.border-fx{
+		@include scale(0,1);
+		@include transformFrom(left, top);
+		background-color: #fff;
+		@include transitions-ease(.4s);
+	}
 
 	.ac-input{
-		padding: 5px 5px 12px 0;
+		width: 100%;
+		padding: 5px 45px 10px 0;
 		color: #fff;
 		border: none;
 		background-color: transparent;
-
-		@media screen and (max-width: 1399px) {
-			padding-bottom: 8px;
-		}
 
 		&:focus, &.filled{
 			outline: none;
 			border: none;
 
 			& + label{
-				@include translate(30px, 0);
-				opacity: 0;
+				@include translate(0, -28px);
+				font-size: 14px;
+				color: #fff;
+			}
+
+			& ~ .border-fx{
+				@include scale(1,1);
 			}
 		}
 	}
@@ -53,6 +54,15 @@
 		left: 0;
 		color: #868da4;
 		@include transitions-ease(.5s);
+	}
+
+	.units{
+		position: absolute;
+		top: 7px;
+		right: 0;
+		font-size: 14px;
+		color: #868da4;
+		pointer-events: none;
 	}
 }
 
@@ -71,7 +81,7 @@
 		padding-top: 4px;
 	}
 	@media screen and (max-width: 767px) {
-		padding-top: 6px;
+		padding-top: 8px;
 		line-height: 1em;
 	}
 
@@ -99,14 +109,13 @@
 
 	.checkmark{
 		position: absolute;
-		top: 2px;
+		top: 0;
 		left: 0;
 		width: 18px;
 		height: 18px;
 		border: 1px solid #868da4;
 
 		@media screen and (max-width: 1399px) {
-			top: 4px;
 			width: 16px;
 			height: 16px;
 		}

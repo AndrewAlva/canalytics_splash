@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					registerForm.show();
 					$('html, body').animate({
 						scrollTop: $('#register-section').offset().top
-					}, 2000);
+					}, 1400);
 				});
 			},
 			sendListener: function(){
