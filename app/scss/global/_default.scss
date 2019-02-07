@@ -20,6 +20,12 @@ body{
 	@media screen and (min-width: 1025px) {
 		min-height: 650px;
 	}
+	@media screen and (min-width: 1400px) {
+		min-height: 750px;
+	}
+	@media screen and (min-width: 1600px) {
+		min-height: 900px;
+	}
 
 	&.showForm{
 		// min-height: 920px;

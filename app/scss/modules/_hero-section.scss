@@ -154,6 +154,12 @@
 				display: block;
 				top: 8px;
 			}
+
+			@media screen and (min-width: 1025px) {
+				display: inline-block;
+				margin-top: 0;
+				margin-left: 55px;
+			}
 		}
 	}
 }
