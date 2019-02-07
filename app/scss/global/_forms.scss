@@ -8,7 +8,7 @@
 	line-height: 1em;
 	@include smoothFont;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 768px) and (max-width: 1599px) {
 		font-size: 18px;
 	}
 
@@ -58,6 +58,10 @@
 			& ~ .border-fx{
 				@include scale(1,1);
 			}
+
+			& ~ .units{
+				color: #fff;
+			}
 		}
 	}
 
@@ -76,6 +80,7 @@
 		font-size: 14px;
 		color: #868da4;
 		pointer-events: none;
+		@include transitions-ease(.5s);
 	}
 }
 
@@ -83,6 +88,8 @@
 	position: relative;
 	margin: 0;
 	padding-left: 40px;
+	padding-top: 8px;
+	line-height: 1em;
 	font-family: 'Calibre';
 	font-size: 14px;
 	font-weight: lighter;
@@ -96,15 +103,6 @@
 	@media screen and (min-width: 1600px) {
 		font-size: 18px;
 		padding-left: 45px;
-	}
-
-
-	@media screen and (max-width: 1399px) {
-		padding-top: 4px;
-	}
-	@media screen and (max-width: 767px) {
-		padding-top: 8px;
-		line-height: 1em;
 	}
 
 	input{

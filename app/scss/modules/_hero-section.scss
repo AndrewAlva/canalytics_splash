@@ -83,26 +83,26 @@
 	}
 
 	.texts-wrapper{
-		position: absolute;
-		left: 8.3vw;
-		bottom: 150px;
+		position: relative;
+		width: 251px;
+		left: 10%;
+		margin-top: 90px;
 		@include trans-register(.4s);
 
-		@media screen and (max-width: 1399px) {
+		@media screen and (min-width: 768px) {
+			position: absolute;
+			width: auto;
+			bottom: 120px;
+		}
+		@media screen and (min-width: 1025px) {
 			left: 6vw;
 			bottom: 80px;
 		}
-
-		@media screen and (max-width: 1024px) {
-			bottom: 120px;
+		@media screen and (min-width: 1400px) {
+			left: 8.3vw;
 		}
-
-		@media screen and (max-width: 767px) {
-			position: relative;
-			width: 251px;
-			left: 10%;
-			bottom: auto;
-			margin-top: 90px;
+		@media screen and (min-width: 1600px) {
+			bottom: 150px;
 		}
 
 		.hero-title{

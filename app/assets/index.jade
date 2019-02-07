@@ -5,7 +5,7 @@ block title
 
 block content
 	#main-wrapper
-		.tester
+		//- .tester
 		section#hero-section
 			span.ac-mask
 				span
@@ -154,10 +154,9 @@ block content
 
 				form(action="#")
 					h5.form-title 
-						span.ac-mask
-							span Apply here 
-								span#success-submit 
-									//- span.ac-shift
+						span Apply here 
+							span#success-submit 
+								//- span.ac-shift
 										span Submitted.
 					
 					#application-fields.form-fields
@@ -218,19 +217,18 @@ block content
 								input#agree-checkbox(type="checkbox")
 								span.checkmark
 								span.label 
-									span.ac-mask
-										span
-											|I agree to the 
-											a(href="terms.html" target="_blank") terms of service and partnership.
+									span
+										|I agree to the 
+										a(href="terms.html" target="_blank") terms of service and partnership.
 						
 						button(type="submit" disabled)#submit-application.ac-btn.submit-btn
 							span.ac-btn-label Send
 
 						h6.disclaimer 
-							span.ac-mask
-								span Registration doesn’t guarantee
-							span.ac-mask
-								span admittance to the program.
+							span
+								|Registration doesn’t guarantee
+								br
+								|admittance to the program.
 
 		
 		section#loading-curtain
