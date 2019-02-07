@@ -8,6 +8,10 @@
 	line-height: 1em;
 	@include smoothFont;
 
+	@media screen and (min-width: 768px) {
+		font-size: 18px;
+	}
+
 	&:before, .border-fx{
 		content: '';
 		position: absolute;
@@ -27,10 +31,11 @@
 
 	.ac-input{
 		width: 100%;
-		padding: 5px 45px 10px 0;
+		padding: 5px 5px 10px 0;
 		color: #fff;
 		border: none;
 		background-color: transparent;
+		&.unit-spec{padding-right: 50px;}
 
 		&:focus, &.filled{
 			outline: none;
@@ -40,6 +45,10 @@
 				@include translate(0, -28px);
 				font-size: 14px;
 				color: #fff;
+
+				@media screen and (min-width: 768px) {
+					@include translate(0, -20px);
+				}
 			}
 
 			& ~ .border-fx{
@@ -68,16 +77,21 @@
 
 .ac-checkbox{
 	position: relative;
+	margin: 0;
 	padding-left: 40px;
 	font-family: 'Calibre';
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: lighter;
 	@include smoothFont;
 	color: #868da4;
 	cursor: pointer;
 
+	@media screen and (min-width: 768px) {
+		font-size: 16px;
+	}
+
+
 	@media screen and (max-width: 1399px) {
-		font-size: 14px;
 		padding-top: 4px;
 	}
 	@media screen and (max-width: 767px) {
@@ -111,25 +125,15 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 18px;
-		height: 18px;
+		width: 24px;
+		height: 24px;
 		border: 1px solid #868da4;
-
-		@media screen and (max-width: 1399px) {
-			width: 16px;
-			height: 16px;
-		}
-
-		@media screen and (max-width: 767px) {
-			width: 26px;
-			height: 26px;
-		}
 
 		&:before{
 			content: '';
 			position: absolute;
-			width: 5px;
-			height: 5px;
+			width: 8px;
+			height: 8px;
 			border-radius: 50%;
 			margin: auto;
 			top: 3px; bottom: 0;
@@ -138,16 +142,6 @@
 			@include scale(0,0);
 			opacity: 0;
 			@include transitions-ease(.4s);
-
-			@media screen and (max-width: 1399px) {
-				width: 4px;
-				height: 4px;
-			}
-
-			@media screen and (max-width: 767px) {
-				width: 8px;
-				height: 8px;
-			}
 		}
 	}
 

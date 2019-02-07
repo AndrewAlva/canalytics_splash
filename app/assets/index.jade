@@ -187,13 +187,13 @@ block content
 							.border-fx
 						
 						.input-container
-							input#farmsize-input.ac-input(type="number")
+							input#farmsize-input.ac-input.unit-spec(type="number" min="1")
 							label(for="farmsize-input") Farm size
 							span.units in sq. ft
 							.border-fx
 						
 						.input-container
-							input#plants-input.ac-input(type="number")
+							input#plants-input.ac-input(type="number" min="1")
 							label(for="plants-input") Plant count
 							.border-fx
 						
@@ -203,7 +203,7 @@ block content
 							.border-fx
 						
 						.input-container
-							input#yields-input.ac-input(type="number")
+							input#yields-input.ac-input.unit-spec(type="number" min="0")
 							label(for="yields-input") Yields
 							span.units in lbs.
 							.border-fx
