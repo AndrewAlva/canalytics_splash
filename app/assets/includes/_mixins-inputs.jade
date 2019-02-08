@@ -1,0 +1,28 @@
+mixin regular-input(id, type, label)
+	.input-container
+		input(id="#{id}" name="#{id}" type="#{type}" required).ac-input
+		label(for="#{id}") #{label}
+		.border-fx
+
+mixin regular-input-units(id, type, label, units, min, max)
+	.input-container
+		input(id="#{id}" name="#{id}" type="#{type}" min="#{min}" max="#{max}" required).ac-input.unit-spec
+		label(for="#{id}") #{label}
+		.border-fx
+		span.units #{units}
+
+mixin number-input(id, label, min, max)
+	.input-container
+		input(id="#{id}" name="#{id}" type="number" min="#{min}" max="#{max}" required).ac-input
+		label(for="#{id}") #{label}
+		.border-fx
+
+
+mixin select-input(id, label, ...items)
+	.input-container.ac-select-container
+		select(id="#{id}" name="#{id}" required).ac-input
+			each item in items
+				option(value="#{item}") #{item}
+
+		label(for="#{id}") #{label}
+		.border-fx

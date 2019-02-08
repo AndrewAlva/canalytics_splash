@@ -4,6 +4,7 @@ block title
 	| Grower Sponsorship
 
 block content
+	include includes/_mixins-inputs.jade
 	#main-wrapper
 		//- .tester
 		section#hero-section
@@ -160,52 +161,15 @@ block content
 										span Submitted.
 					
 					#application-fields.form-fields
-						.input-container
-							input#name-input.ac-input(type="text")
-							label(for="name-input") Your Name *
-							.border-fx
-						
-						.input-container
-							input#email-input.ac-input(type="email")
-							label(for="email-input") Email address *
-							.border-fx
-						
-						.input-container
-							input#phone-input.ac-input(type="number")
-							label(for="phone-input") Phone Number *
-							.border-fx
-						
-						.input-container
-							input#state-input.ac-input(type="text")
-							label(for="state-input") State
-							.border-fx
-						
-						.input-container
-							input#farmtype-input.ac-input(type="text")
-							label(for="farmtype-input") Farm type
-							.border-fx
-						
-						.input-container
-							input#farmsize-input.ac-input.unit-spec(type="number" min="1")
-							label(for="farmsize-input") Farm size
-							span.units in sq. ft
-							.border-fx
-						
-						.input-container
-							input#plants-input.ac-input(type="number" min="1")
-							label(for="plants-input") Plant count
-							.border-fx
-						
-						.input-container
-							input#growcycles-input.ac-input(type="number" min="1" max="6")
-							label(for="growcycles-input") Grow cycles
-							.border-fx
-						
-						.input-container
-							input#yields-input.ac-input.unit-spec(type="number" min="0")
-							label(for="yields-input") Yields
-							span.units in lbs.
-							.border-fx
+						+regular-input('name-input', 'text', 'Your Name')
+						+regular-input('email-input', 'email', 'Email address')
+						+regular-input('phone-input', 'text', 'Phone number')
+						+regular-input('state-input', 'text', 'State')
+						+select-input('farmtype-select', 'Farm type', '', 'Indoor farm', 'Outdoor farm', 'Both')
+						+regular-input-units('farmsize-input', 'number', 'Farm size', 'in sq. ft', 0)
+						+number-input('plants-input', 'Plant count', 1)
+						+select-input('growcycles-select', 'Grow cycles', '', 1, 2, 3, 4, 5, 6)
+						+regular-input-units('yields-input', 'number', 'Yields', 'in lbs.')
 					
 					span#success-message 
 						//- h4.ac-shift 

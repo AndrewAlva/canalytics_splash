@@ -166,6 +166,102 @@
 	}
 }
 
+.ac-select-container{
+	height: 41px;
+
+	&.opened{z-index: 11;}
+
+	select{
+		display: none;
+
+		& ~ .ab-input-cta{
+			@include translate(0, 8px);
+		}
+	}
+
+	.option-selected{
+		z-index: 10;
+		position: relative;
+		height: 41px;
+		padding: 5px 28px 10px 0;
+		font-size: 22px;
+		line-height: 1.2em;
+		color: #fff;
+		cursor: pointer;
+
+		@media screen and (max-width: 1599px) and (min-width: 768px){
+			font-size: 18px;
+		}
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0; 
+			bottom: 6px;
+			right: 8px;
+			margin: auto;
+			width: 13px;
+			height: 14px;
+			background-image: url(../img/arrow.svg);
+			background-size: 100%;
+			background-position: center 0;
+			background-repeat: no-repeat;
+			@include scale(1,-1);
+			@include transitions-ease(.4s);
+
+			@media (min-width: 768px){background-position: center 5px;}
+		}
+		&.select-arrow-active:before{
+			@include scale(1,1);
+			background-position: center 2px;
+		}
+	}
+
+	/* style the items (options), including the selected item: */
+	.select-items div, .select-selected {
+		font-size: 16px;
+		font-weight: 100;
+		@include smoothFont;
+		color: #fff;
+		cursor: pointer;
+		padding: 11px 25px 6px;
+	}
+
+	/* Style items (options): */
+	.select-items {
+		z-index: 99;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: #10123f;
+		border: 1px solid #fff;
+		overflow: hidden;
+		@include drawShadow(0,0,7px,0,rgba(0,0,0,1));
+		@include transitions-ease(.5s);
+		@include transformFrom(top, center);
+
+		div:first-child{
+			display: none;
+		}
+	}
+
+	/* Hide the items when the select box is closed: */
+	.select-hide {
+		pointer-events: none;
+		opacity: 0;
+		@include scale(1,.9);
+	}
+
+	.select-items div:hover{
+		background-color: #090a2d;
+	}
+
+	.same-as-selected {
+		background-color: #1b1e4c;
+	}
+}
+
 #success-message{
 	font-family: 'Calibre';
 	font-weight: lighter;

@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			sendListener: function(){
 				this.submit_btn.on('click', function(e) {
 					e.preventDefault();
-					if($('#name-input').val() == "" || $('#email-input').val() == "" || $('#phone-input').val() == "" ){
+					if($('#name-input').val() == "" || $('#email-input').val() == "" || $('#phone-input').val() == "" || $('#state-input').val() == "" || $('#farmtype-input').val() == "" || $('#farmsize-input').val() == "" || $('#plants-input').val() == "" || $('#growcycles-input').val() == "" || $('#yields-input').val() == ""){
 						alert("You must fill all fields to complete the request!");
 					} else {
 						$.ajax({
 							url: "send_data.php",
 							type: "POST",
-							data: { name: $('#name-input').val(), email: $('#email-input').val(), tel: $("#phone-input").val() }
+							data: { name: $('#name-input').val(), email: $('#email-input').val(), tel: $("#phone-input").val(), state: $("#state-input").val(), farmtype: $("#farmtype-input").val(), farmsize: $("#farmsize-input").val(), plants: $("#plants-input").val(), growcycles: $("#growcycles-input").val(), yields: $("#yields-input").val() }
 						})
 						.done(function(e) {
 							// console.log("e",e);
@@ -111,6 +111,130 @@ document.addEventListener('DOMContentLoaded', function() {
 						}
 					});
 				});
+
+		// AC square inputs functionalty
+			// Select option input, special interaction
+				var ac_select_wrappers, default_select;
+				var ac_selected_item, ac_options_list, ac_option;
+
+				function create_selects(){
+					// Look for any elements with the class "custom-select"
+					ac_select_wrappers = document.getElementsByClassName("ac-select-container");
+					for (var i = 0; i < ac_select_wrappers.length; i++) {
+						default_select = ac_select_wrappers[i].getElementsByTagName("select")[0];
+
+						// For each custom select wrapper, create a new "div" that will act as the selected item, and the first item 
+						ac_selected_item = document.createElement("div");
+						ac_selected_item.setAttribute("class", "option-selected");
+						ac_selected_item.innerHTML = default_select.options[default_select.selectedIndex].innerHTML;
+
+						ac_select_wrappers[i].appendChild(ac_selected_item);
+
+						// For each custom select wrapper, create a new "div" that will contain the options list
+						ac_options_list = document.createElement("div");
+						ac_options_list.setAttribute("class", "select-items select-hide");
+						
+						for (var j = 0; j < default_select.length; j++) {
+							/* For each option in the original select element,
+				    		create a new "div" that will act as an option item */
+							ac_option = document.createElement("div");
+							ac_option.innerHTML = default_select.options[j].innerHTML;
+
+							// When an item is clicked, update the original select box, and the selected item
+							ac_option.addEventListener("click", function(e){
+								var s,h,y;
+								s = this.parentNode.parentNode.getElementsByTagName("select")[0]; /* This is equal to "default_select" */
+						        h = this.parentNode.previousSibling; /* Same as "selected_item" */
+						        for (k = 0; k < s.length; k++) {
+						        	// Find what is the option selected
+							        if (s.options[k].innerHTML == this.innerHTML) {
+							        	// Select the current option at the real <select> element
+							            s.selectedIndex = k;
+
+							            // Update the content of "selected_item" div
+							            h.innerHTML = this.innerHTML;
+
+							            // Find the previous selected option and remove its active class
+							            y = this.parentNode.getElementsByClassName("same-as-selected");
+							            for (l = 0; l < y.length; l++) {
+							            	y[l].removeAttribute("class");
+							            }
+
+							            // Set the "active" class on the new option
+							            this.setAttribute("class", "same-as-selected");
+							            break;
+							        }
+						        }
+
+					            // Find <select> element and add 'filled' class to
+					            // set label on top as if input was filled
+					            this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.classList.add("filled");
+
+						        h.click();
+							});
+							// Write the options into the custom <select> list
+							ac_options_list.appendChild(ac_option);
+						};
+
+						// Write the complete list of options into the custom <select> wrapper
+						ac_select_wrappers[i].appendChild(ac_options_list);
+
+						/* When the select box is clicked, close any other select boxes,
+				      	and open/close the current select box */
+				      	ac_selected_item.addEventListener("click", function(e) {
+							e.stopPropagation();
+						    closeAllSelect(this);
+						    this.nextSibling.classList.toggle("select-hide");
+						    this.classList.toggle("select-arrow-active");
+
+						    $(this.parentNode).addClass('opened');
+
+						    /* Dropdowns extra action to close them
+						    since stopPropagation() interfers with it */
+						    if (typeof ab_dropdowns !== 'undefined') {
+						    	close_ab_dropdowns();
+						    }
+						});
+					};
+				}
+
+				/* A function that will close all select boxes in the document,
+				except the current select box */
+				function closeAllSelect(elmnt) {
+					var x, y, arrNo = [];
+					x = document.getElementsByClassName("select-items");
+					y = document.getElementsByClassName("option-selected");
+
+					for (var i = 0; i < y.length; i++) {
+						if (elmnt == y[i]) {
+							arrNo.push(i)
+						} else {
+							y[i].classList.remove("select-arrow-active");
+						}
+					}
+
+					for (var i = 0; i < x.length; i++) {
+						if (arrNo.indexOf(i)) {
+							x[i].classList.add("select-hide");
+						}
+					}
+
+					for (var i = 0; i < ac_select_wrappers.length; i++) {
+						$(ac_select_wrappers[i]).removeClass('opened');
+					};
+				}
+
+			// Create custom select options lists as inputs of forms
+		        if(typeof create_selects !== 'undefined'){
+		        	create_selects();
+		        }
+
+		        $(document).on("click", function(e) {
+		    		// Custom select inputs: open/close
+		    		if(typeof create_selects !== 'undefined'){
+		    			closeAllSelect();
+		    		}
+		    	});
 
 		// Register form interactions
 			// Behavior will depend on if user's device is mobile or not

@@ -1,12 +1,20 @@
 <?php
-	$recipient = "rh@advancedcanalytics.com, andrew@mandelbrot.mx";
+	// $recipient = "rh@advancedcanalytics.com, andrew@mandelbrot.mx";
+	$recipient = "andrew@mandelbrot.mx";
 	$subject = "AC Green Ticket | Sponsorship Request";
 
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$tel = $_POST['tel'];
 
-	$formcontent="Hey gents, this is a new user submitting their info to request sponsorship from advancedcanalytics.com; this is what they say:\n\nName: $name\nEmail: $email\nPhone: $tel.\n\n";
+	$state = $_POST['state'];
+	$farmtype = $_POST['farmtype'];
+	$farmsize = $_POST['farmsize'];
+	$plants = $_POST['plants'];
+	$growcycles = $_POST['growcycles'];
+	$yields = $_POST['yields'];
+
+	$formcontent="Hey gents, this is a new user submitting their info to request sponsorship from advancedcanalytics.com; this is what they say:\n\nName: $name\nEmail: $email\nPhone: $tel\nState: $state\nFarm type: $farmtype\nFarm size: $farmsize\nPlants count: $plants\nGrow cycles: $growcycles\nYields: $yields\n\n";
 	$mailheader = "From: $email \r\n";
 
 	// Write in the .txt file
