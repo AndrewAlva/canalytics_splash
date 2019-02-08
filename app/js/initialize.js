@@ -71,11 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			success: function(){
 				$('.form-footer').fadeOut(700);
+				$('#apply-cta').removeClass('show');
+				$('#success-message').html("<h4 class='ac-shift'> <span class='ac-target'> You're one step closer. We'll get back to you soon with details to win the sponsorship. </span> </h4> ");
+				
 				$('#application-fields').fadeOut(700, function(){
-					$('#success-message').html("<h4 class='ac-shift'> <span class='ac-target'> You're one step closer. We'll get back to you soon with details to win the sponsorship. </span> </h4> ");
-					$('#success-submit').html("<span class='ac-shift'> <span class='ac-target'> Submitted. </span> </h4> ");
+					$('#apply-cta').html("Application<br><span>Submitted.</span>");
+					$('#apply-cta').addClass('show');
 					$('#success-message').find('.ac-target').addClass('show');
-					$('#success-submit').find('.ac-target').addClass('show');
 				});
 			},
 

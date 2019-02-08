@@ -168,6 +168,8 @@
 
 .ac-select-container{
 	height: 41px;
+	@media screen and (min-width: 768px){height: 37px;}
+	@media screen and (min-width: 1600px){height: 45px;}
 
 	&.opened{z-index: 11;}
 
@@ -189,9 +191,11 @@
 		color: #fff;
 		cursor: pointer;
 
-		@media screen and (max-width: 1599px) and (min-width: 768px){
+		@media screen and (min-width: 768px) and (max-width: 1599px){
 			font-size: 18px;
 		}
+		@media screen and (min-width: 768px){height: 37px;}
+		@media screen and (min-width: 1600px){height: 45px;}
 
 		&:before{
 			content: '';
@@ -208,8 +212,6 @@
 			background-repeat: no-repeat;
 			@include scale(1,-1);
 			@include transitions-ease(.4s);
-
-			@media (min-width: 768px){background-position: center 5px;}
 		}
 		&.select-arrow-active:before{
 			@include scale(1,1);
@@ -267,4 +269,13 @@
 	font-weight: lighter;
 	line-height: 1.2em;
 	color: #868da4;
+	font-size: 14px;
+
+	@media screen and (min-width: 768px){font-size: 16px;}
+	@media screen and (min-width: 1400px){font-size: 22px;}
+
+	h4{
+		font-weight: 100;
+		@include smoothFont;
+	}
 }
