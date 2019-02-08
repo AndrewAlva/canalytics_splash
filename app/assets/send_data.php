@@ -6,7 +6,6 @@
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$tel = $_POST['tel'];
-
 	$state = $_POST['state'];
 	$farmtype = $_POST['farmtype'];
 	$farmsize = $_POST['farmsize'];
