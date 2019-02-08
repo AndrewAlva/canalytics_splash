@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			sendListener: function(){
 				this.submit_btn.on('click', function(e) {
 					e.preventDefault();
-					if($('#name-input').val() == "" || $('#email-input').val() == "" || $('#phone-input').val() == "" || $('#state-input').val() == "" || $('#farmtype-input').val() == "" || $('#farmsize-input').val() == "" || $('#plants-input').val() == "" || $('#growcycles-input').val() == "" || $('#yields-input').val() == ""){
+					if($('#name-input').val() == "" || $('#email-input').val() == "" || $('#phone-input').val() == "" || $('#state-input').val() == "" || $('#farmtype-select').val() == "" || $('#farmsize-input').val() == "" || $('#plants-input').val() == "" || $('#growcycles-select').val() == "" || $('#yields-input').val() == ""){
 						alert("You must fill all fields to complete the request!");
 					} else {
 						$.ajax({
 							url: "send_data.php",
 							type: "POST",
-							data: { name: $('#name-input').val(), email: $('#email-input').val(), tel: $("#phone-input").val(), state: $("#state-input").val(), farmtype: $("#farmtype-input").val(), farmsize: $("#farmsize-input").val(), plants: $("#plants-input").val(), growcycles: $("#growcycles-input").val(), yields: $("#yields-input").val() }
+							data: { name: $('#name-input').val(), email: $('#email-input').val(), tel: $("#phone-input").val(), state: $("#state-input").val(), farmtype: $("#farmtype-select").val(), farmsize: $("#farmsize-input").val(), plants: $("#plants-input").val(), growcycles: $("#growcycles-select").val(), yields: $("#yields-input").val() }
 						})
 						.done(function(e) {
 							// console.log("e",e);
