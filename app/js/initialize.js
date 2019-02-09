@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
 				$('html').bind('mousewheel DOMMouseScroll', function (e) {
 					var delta = (e.originalEvent.wheelDelta || -e.originalEvent.detail);
 
-					if (delta < 0) {
-						// console.log('You scrolled down');
+					if (delta < -100) {
+						// console.log('Delta: ' + delta);
 						registerForm.show();
-					} else if (delta > 0) {
-						// console.log('You scrolled up');
+					} else if (delta > 100) {
+						// console.log('Delta: ' + delta);
 						registerForm.hide();
 					}
 				});

@@ -6,7 +6,7 @@
 	height: 100%;
 	padding: 60px;
 	background-color: #f4f5f6;
-	@include trans-register(.4s);
+	@include trans-register(.8s);
 	&.loading{
 		width: 100%;
 		-webkit-animation: fadeIn 1.5s linear; /* Safari 4.0 - 8.0 */
@@ -98,7 +98,7 @@
 			left: 6vw;
 			bottom: 80px;
 		}
-		@media screen and (min-width: 1400px) {
+		@media screen and (min-width: 1441px) {
 			left: 8.3vw;
 		}
 		@media screen and (min-width: 1600px) {
@@ -160,7 +160,7 @@
 				margin-top: 0;
 				margin-left: 55px;
 			}
-			@media screen and (min-width: 1400px) {
+			@media screen and (min-width: 1441px) {
 				font-size: 18px;
 			}
 		}
@@ -169,25 +169,7 @@
 
 // Showing form state
 .showForm #hero-section{
-
-	@media screen and (max-width: 1399px) {
-		// height: 76%;
-	}
-
-	.texts-wrapper{
-		// @include translate(0, 100px);
-
-		// @media screen and (max-width: 1399px) {
-		// 	@include translate(0, 30px);
-		// }
-
-		// @media screen and (max-width: 1024px) {
-		// 	bottom: 80px;
-		// }
-
-		// @media screen and (max-width: 767px) {
-		// 	bottom: auto;
-		// 	@include translate(0, 0);
-		// }
+	@media screen and (min-width: 768px) {
+		opacity: .5;
 	}
 }
